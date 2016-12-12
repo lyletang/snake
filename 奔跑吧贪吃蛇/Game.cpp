@@ -1,5 +1,5 @@
-//2016¿¿¿¿¿¿¿¿¿¿¿
-//Name: ¿¿¿¿¿¿
+//2016æ ¡ç¨‹åºè®¾è®¡å¤§èµ›ç¬¬ä¸€å
+//Name: å¥”è·‘å§è´ªåƒè›‡
 //Team: Victors
 //Headman: Jiahui Tang
 //Team_member: Xinguang Guo, Pengyue Zhao, Zhanhang Tan
@@ -14,7 +14,7 @@
 #include<fstream.h>
 #include<stdlib.h>
 #include<ctype.h>
-#pragma comment(lib,"Winmm.lib") //¿ªÆôÒôÆµÍ·ÎÄ¼ş
+#pragma comment(lib,"Winmm.lib") //å¼€å¯éŸ³é¢‘å¤´æ–‡ä»¶
 
 void main_menu1();
 void main_menu2();
@@ -39,7 +39,7 @@ void set_choose();
 
 #define UNIT 20
 
-int  Snake_judge1_1();//ÉßÅĞ¶Ï
+int  Snake_judge1_1();//è›‡åˆ¤æ–­
 int  Snake_judge1_2();
 int  Snake_judge1_3();
 int  Snake_judge1_4();
@@ -64,7 +64,7 @@ int  Snake_judge5_2();
 int  Snake_judge5_3();
 int  Snake_judge5_4();
 int  Snake_judge5_5();
-void Add_food_1_1_1();//Ê³ÎïÌí¼Ó
+void Add_food_1_1_1();//é£Ÿç‰©æ·»åŠ 
 void Add_food_1_1_2();
 void Add_food_1_1_3();
 void Add_food_1_1_4();
@@ -89,7 +89,7 @@ void Add_food_1_5_2();
 void Add_food_1_5_3();
 void Add_food_1_5_4();
 void Add_food_1_5_5();
-void Add_food_2_1_1();//Ê³ÎïÌí¼Ó
+void Add_food_2_1_1();//é£Ÿç‰©æ·»åŠ 
 void Add_food_2_1_2();
 void Add_food_2_1_3();
 void Add_food_2_1_4();
@@ -114,7 +114,7 @@ void Add_food_2_5_2();
 void Add_food_2_5_3();
 void Add_food_2_5_4();
 void Add_food_2_5_5();
-void Add_food_3_1_1();//Ê³ÎïÌí¼Ó
+void Add_food_3_1_1();//é£Ÿç‰©æ·»åŠ 
 void Add_food_3_1_2();
 void Add_food_3_1_3();
 void Add_food_3_1_4();
@@ -139,7 +139,7 @@ void Add_food_3_5_2();
 void Add_food_3_5_3();
 void Add_food_3_5_4();
 void Add_food_3_5_5();
-int food_decide1_1(int,int,int);//Ê³ÎïÅĞ¶Ï
+int food_decide1_1(int,int,int);//é£Ÿç‰©åˆ¤æ–­
 int food_decide1_2(int,int,int);
 int food_decide1_3(int,int,int);
 int food_decide1_4(int,int,int);
@@ -215,29 +215,29 @@ void Black5_2();
 void Black5_3();
 void Black5_4();
 void Black5_5();
-int N=5;//ÉßÉí³¤
-int snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
-const int snake_miss_speed=100;//ÉßÉíÏûÊ§ËÙ¶È
-int direction=4;//ÉßÍ·µ±Ç°·½Ïò
-int old_direction=4;//ÉßÍ·ÉÏÒ»·½Ïò
-IMAGE img;//µØÍ¼
-IMAGE img1;//ÉßÎ»Í¼
-IMAGE img3,img5;//±¬Õ¨Ğ§¹ûÍ¼
-IMAGE img4,img6,img7;//game overÍ¼
+int N=5;//è›‡èº«é•¿
+int snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
+const int snake_miss_speed=100;//è›‡èº«æ¶ˆå¤±é€Ÿåº¦
+int direction=4;//è›‡å¤´å½“å‰æ–¹å‘
+int old_direction=4;//è›‡å¤´ä¸Šä¸€æ–¹å‘
+IMAGE img;//åœ°å›¾
+IMAGE img1;//è›‡ä½å›¾
+IMAGE img3,img5;//çˆ†ç‚¸æ•ˆæœå›¾
+IMAGE img4,img6,img7;//game overå›¾
 IMAGE img8;
 IMAGE img8_1;
 IMAGE p0,p1_1,p1_2,p2_1,p2_2,p3_1,p3_2;
-IMAGE snake[15][2];//ÉßÎ»Í¼´æ·Å
-IMAGE foods[3][2];//Ê³ÎïÎ»Í¼´æ·Å
-IMAGE props[3][2];//µÀ¾ß´æ·Å
-void Snakemove();//ÉßÒÆ¶¯
-void Gainpicture();//Î»Í¼¶ÁÈ¡
-void Explode(int,int);//±¬Õ¨Ğ§¹û
-void Snake_head();//ÉßÍ·ĞŞ¸Ä
-void Snake_second();//ÉßµÚ¶ş½ÚĞŞ¸Ä
-void Snake_tail();//ÉßÎ²ĞŞ¸Ä
-//mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL);//Ê¤ÀûÒôĞ§
-void product_props2_1();//µÀ¾ßËæ»úÌí¼Ó
+IMAGE snake[15][2];//è›‡ä½å›¾å­˜æ”¾
+IMAGE foods[3][2];//é£Ÿç‰©ä½å›¾å­˜æ”¾
+IMAGE props[3][2];//é“å…·å­˜æ”¾
+void Snakemove();//è›‡ç§»åŠ¨
+void Gainpicture();//ä½å›¾è¯»å–
+void Explode(int,int);//çˆ†ç‚¸æ•ˆæœ
+void Snake_head();//è›‡å¤´ä¿®æ”¹
+void Snake_second();//è›‡ç¬¬äºŒèŠ‚ä¿®æ”¹
+void Snake_tail();//è›‡å°¾ä¿®æ”¹
+//mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL);//èƒœåˆ©éŸ³æ•ˆ
+void product_props2_1();//é“å…·éšæœºæ·»åŠ 
 void product_props2_2();
 void product_props2_3();
 void product_props2_4();
@@ -252,7 +252,7 @@ void product_props5_2();
 void product_props5_3();
 void product_props5_4();
 void product_props5_5();
-void Energy3_1();//ÄÜÁ¿
+void Energy3_1();//èƒ½é‡
 void Energy3_2();
 void Energy3_3();
 void Energy3_4();
@@ -267,12 +267,12 @@ void Energy5_2();
 void Energy5_3();
 void Energy5_4();
 void Energy5_5();
-void Add_snake();//Éß³¤Ìí¼Ó
-void Cut_down_snake();//ÉßÉí¼õ¶Ì
-void not_add_snake();//Éß³¤¶È²»±äº¯Êı
-void Speed_add();//ËÙ¶ÈÔö¼Ó
-void Speed_down();//ËÙ¶È¼õÉÙ
-int random_landmine4_1();//Ëæ»úµØÀ×
+void Add_snake();//è›‡é•¿æ·»åŠ 
+void Cut_down_snake();//è›‡èº«å‡çŸ­
+void not_add_snake();//è›‡é•¿åº¦ä¸å˜å‡½æ•°
+void Speed_add();//é€Ÿåº¦å¢åŠ 
+void Speed_down();//é€Ÿåº¦å‡å°‘
+int random_landmine4_1();//éšæœºåœ°é›·
 int random_landmine4_2();
 int random_landmine4_3();
 int random_landmine4_4();
@@ -282,7 +282,7 @@ int random_landmine5_2();
 int random_landmine5_3();
 int random_landmine5_4();
 int random_landmine5_5();
-int customs_pass_1_1();//¹Ø¿¨//ĞèÒªĞ´25¹Ø
+int customs_pass_1_1();//å…³å¡//éœ€è¦å†™25å…³
 int customs_pass_1_2();
 int customs_pass_1_3();
 int customs_pass_1_4();
@@ -307,7 +307,7 @@ int customs_pass_5_2();
 int customs_pass_5_3();
 int customs_pass_5_4();
 int customs_pass_5_5();
-int local_snake[100][3]={{7,1,2},{6,1,12},{5,1,12},{4,1,12},{3,1,8}};//ÉßÉí³õÊ¼»¯
+int local_snake[100][3]={{7,1,2},{6,1,12},{5,1,12},{4,1,12},{3,1,8}};//è›‡èº«åˆå§‹åŒ–
 int old_local_snake[50][3]={{7,1,2},{6,1,12},{5,1,12},{4,1,12},{3,1,8}};
 int chushi_snake[100][3]={{7,1,2},{6,1,12},{5,1,12},{4,1,12},{3,1,8}};
 int food_x1=10,food_y1=10;
@@ -319,51 +319,51 @@ int landmine_x=10,landmine_y=20;
 int count1;
 int count2;
 int count3;
-int count;//Ê³Îï×ÜÊı
+int count;//é£Ÿç‰©æ€»æ•°
 int count_1;
 int count1_1;
 int count2_1;
-int bool_p;//ÅĞ¶ÏÊÇ·ñÎªµÚÒ»´Îµ÷ÓÃ¹Ø¿¨º¯Êı
-int bool_q;//±ê¼Ç¶´ÊÇ·ñÊä³ö
-int boolw;//±ê¼ÇµÀ¾ßÊÇ·ñÊä³ö
+int bool_p;//åˆ¤æ–­æ˜¯å¦ä¸ºç¬¬ä¸€æ¬¡è°ƒç”¨å…³å¡å‡½æ•°
+int bool_q;//æ ‡è®°æ´æ˜¯å¦è¾“å‡º
+int boolw;//æ ‡è®°é“å…·æ˜¯å¦è¾“å‡º
 int count1_2;
 int count1_3;
 int count2_2;
 int count3_2;
 int bool_t;
 int bool2;
-int bool3;//ÅĞ¶ÏÓÃ»§ÊÇ·ñ°´ÏÂr¼ü
-int bool4;//ÅĞ¶ÏÄÜÁ¿²ÛÊÇ·ñ¼¯Âú
+int bool3;//åˆ¤æ–­ç”¨æˆ·æ˜¯å¦æŒ‰ä¸‹ré”®
+int bool4;//åˆ¤æ–­èƒ½é‡æ§½æ˜¯å¦é›†æ»¡
 int bool5;
 int bool6;
 int bool7;
 int bool_k; 
-int bgmusic;//ÒôÀÖÉèÖÃ£¬Ä¬ÈÏ¿ªÆô
-int bgmusic_effect;//ÒôĞ§ÉèÖÃ£¬Ä¬ÈÏ¿ªÆô
+int bgmusic;//éŸ³ä¹è®¾ç½®ï¼Œé»˜è®¤å¼€å¯
+int bgmusic_effect;//éŸ³æ•ˆè®¾ç½®ï¼Œé»˜è®¤å¼€å¯
 
-int food1_1,food1_2,food1_3;//²İİ®
-int food2_1,food2_2,food2_3;//Àæ
-int food3_1,food3_2,food3_3;//Æ»¹û
+int food1_1,food1_2,food1_3;//è‰è“
+int food2_1,food2_2,food2_3;//æ¢¨
+int food3_1,food3_2,food3_3;//è‹¹æœ
 //
-time_t t0;//¶´³öÏÖ³õÊ¼Ê±¼ä
-time_t t2;//µÀ¾ß³öÏÖÊ±¼ä
+time_t t0;//æ´å‡ºç°åˆå§‹æ—¶é—´
+time_t t2;//é“å…·å‡ºç°æ—¶é—´
 time_t t4;
 time_t t6;
-time_t t8;//²»Ôö³¤Ê±¼ä
-time_t t12;//¼õ¶Ì
-time_t t13;//Ôö¼Ó
-time_t t15;//ÉèÖÃÕÏ°­Ê±¼ä
+time_t t8;//ä¸å¢é•¿æ—¶é—´
+time_t t12;//å‡çŸ­
+time_t t13;//å¢åŠ 
+time_t t15;//è®¾ç½®éšœç¢æ—¶é—´
 
-int bool8;//Ëæ»úµÚÒ»°ÑÔ¿³×
-int bool9;//ÃÅ×´Ì¬
-int bool10;//Ëæ»úµÚ¶ş°ÑÔ¿³×
-int bool11;//Ëæ»úµÚÈı°ÑÔ¿³×
-int bool12;//µÚÒ»°ÑÔ¿³××´Ì¬
-int bool13;//µÚ¶ş°ÑÔ¿³××´Ì¬
-int bool14;//µÚÈı°ÑÔ¿³××´Ì¬
-int key_x1=20,key_y1=20;//Ô¿³×1ĞéÄâÖµ
-int key_x2=20,key_y2=20;//Ô¿³×2ĞéÄâÖµ
-int key_x3=20,key_y3=20;//Ô¿³×3ĞéÄâÖµ
+int bool8;//éšæœºç¬¬ä¸€æŠŠé’¥åŒ™
+int bool9;//é—¨çŠ¶æ€
+int bool10;//éšæœºç¬¬äºŒæŠŠé’¥åŒ™
+int bool11;//éšæœºç¬¬ä¸‰æŠŠé’¥åŒ™
+int bool12;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+int bool13;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+int bool14;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
+int key_x1=20,key_y1=20;//é’¥åŒ™1è™šæ‹Ÿå€¼
+int key_x2=20,key_y2=20;//é’¥åŒ™2è™šæ‹Ÿå€¼
+int key_x3=20,key_y3=20;//é’¥åŒ™3è™šæ‹Ÿå€¼
 int door_x1=0,door_y1=27;
 int door_x2=0,door_y2=28;
 int key[5][2];
@@ -376,13 +376,13 @@ int star[25];
 int temp_music[2];
 FILE * fstar;
 FILE * fset;
-//µã½á¹¹
+//ç‚¹ç»“æ„
 struct Point{
 	int x;
 	int y;
 };
 
-//¾ØĞÎ½á¹¹
+//çŸ©å½¢ç»“æ„
 struct Rect{
 	int x;
 	int y;
@@ -390,15 +390,15 @@ struct Rect{
 	int h;
 };
 
-int mouseX;						//Êó±êÎ»ÖÃ×ø±êX
-int mouseY;	     				//Êó±êÎ»ÖÃ×ø±êY
+int mouseX;						//é¼ æ ‡ä½ç½®åæ ‡X
+int mouseY;	     				//é¼ æ ‡ä½ç½®åæ ‡Y
 MOUSEMSG mmsg;
 
-bool isMouseDown;				//Êó±ê°´ÏÂ
-//Point	GetMouseLocal(int x, int y);	//»ñÈ¡Êó±êËùÔÚ×ø±ê
-bool	IsInRect(int x, int y, Rect r);	//ÊÇ·ñÔÚ¾ØĞÎÄÚ
+bool isMouseDown;				//é¼ æ ‡æŒ‰ä¸‹
+//Point	GetMouseLocal(int x, int y);	//è·å–é¼ æ ‡æ‰€åœ¨åæ ‡
+bool	IsInRect(int x, int y, Rect r);	//æ˜¯å¦åœ¨çŸ©å½¢å†…
 
-//ÊÇ·ñÔÚ¾ØĞÎÄÚ
+//æ˜¯å¦åœ¨çŸ©å½¢å†…
 bool IsInRect(int x, int y, Rect r)
 {
 	return ((x >= r.x && x <= r.w) && (y >= r.y && y <= r.h));
@@ -417,23 +417,23 @@ void main_menu1()
 			break;
 	}
 	IMAGE img0,img1,img2,img3,img4,img5,i1,i2,i3,i4,i5,im1,im2,im3,im4,im5;
-	loadimage(&img0,"½çÃæ\\000.jpg");
-	loadimage(&img1,"½çÃæ\\µÚÒ»¹Ø\\1.s.jpg");	
-	loadimage(&img2,"½çÃæ\\µÚ¶ş¹Ø\\2.s.jpg");
-	loadimage(&img3,"½çÃæ\\µÚÈı¹Ø\\3.s.jpg");
-	loadimage(&img4,"½çÃæ\\µÚËÄ¹Ø\\4.s.jpg");
-	loadimage(&img5,"½çÃæ\\µÚÎå¹Ø\\5.s.jpg");
+	loadimage(&img0,"ç•Œé¢\\000.jpg");
+	loadimage(&img1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.s.jpg");	
+	loadimage(&img2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.s.jpg");
+	loadimage(&img3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.s.jpg");
+	loadimage(&img4,"ç•Œé¢\\ç¬¬å››å…³\\4.s.jpg");
+	loadimage(&img5,"ç•Œé¢\\ç¬¬äº”å…³\\5.s.jpg");
 	putimage(0,0,&img0);
 	getimage(&i1,535,92,309,96);
-	saveimage("½çÃæ\\1.bmp",&i1);
+	saveimage("ç•Œé¢\\1.bmp",&i1);
 	getimage(&i2,535,186,309,96);
-	saveimage("½çÃæ\\2.bmp",&i2);
+	saveimage("ç•Œé¢\\2.bmp",&i2);
 	getimage(&i3,535,280,309,96);
-	saveimage("½çÃæ\\3.bmp",&i3);
+	saveimage("ç•Œé¢\\3.bmp",&i3);
 	getimage(&i4,535,374,309,96);
-	saveimage("½çÃæ\\4.bmp",&i4);
+	saveimage("ç•Œé¢\\4.bmp",&i4);
 	getimage(&i5,535,468,309,96);
-	saveimage("½çÃæ\\5.bmp",&i5);
+	saveimage("ç•Œé¢\\5.bmp",&i5);
 	putimage(530,92,&img1);
 	putimage(530,186,&img2);
 	putimage(530,280,&img3);
@@ -443,30 +443,30 @@ void main_menu1()
 	{
 	    if (pass[0][0]==0)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.0.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.0.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[0][0]==1)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.1.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.1.jpg");	
             putimage(535,92,&im1);
 		}
 	    if (pass[0][0]==2)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.2.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.2.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[0][0]==3)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.3.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.3.jpg");	
 	        putimage(535,92,&im1);
 		}
 	}
@@ -474,30 +474,30 @@ void main_menu1()
 	{
 	    if (pass[0][1]==0)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.0.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.0.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[0][1]==1)
 		{
-	        loadimage(&i2,"½çÃæ\\2.bmp");
+	        loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.1.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.1.jpg");	
             putimage(535,186,&im2);
 		}
 	    if (pass[0][1]==2)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.2.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.2.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[0][1]==3)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.3.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.3.jpg");	
 	        putimage(535,186,&im2);
 		}
 	}
@@ -505,30 +505,30 @@ void main_menu1()
 	{
 	    if (pass[0][2]==0)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.0.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.0.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[0][2]==1)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.1.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.1.jpg");	
             putimage(535,280,&im3);
 		}
 	    if (pass[0][2]==2)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.2.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.2.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[0][2]==3)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.3.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.3.jpg");	
 	        putimage(535,280,&im3);
 		}
 	}
@@ -536,30 +536,30 @@ void main_menu1()
 	{
 	    if (pass[0][3]==0)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.0.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.0.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[0][3]==1)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 	    	putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.1.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.1.jpg");	
             putimage(535,374,&im4);
 		}
 	    if (pass[0][3]==2)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.2.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.2.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[0][3]==3)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.3.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.3.jpg");	
 	        putimage(535,374,&im4);
 		}
 	}
@@ -567,30 +567,30 @@ void main_menu1()
 	{
 	    if (pass[0][4]==0)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.0.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.0.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[0][4]==1)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.1.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.1.jpg");	
             putimage(535,468,&im5);
 		}
 	    if (pass[0][4]==2)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.2.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.2.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[0][4]==3)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.3.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.3.jpg");	
 	        putimage(535,468,&im5);
 		}
 	}
@@ -606,12 +606,12 @@ void main_menu2()
 			break;
 	}
 	IMAGE img0,img1,img2,img3,img4,img5,i1,i2,i3,i4,i5,im1,im2,im3,im4,im5;
-	loadimage(&img0,"½çÃæ\\000.jpg");
-	loadimage(&img1,"½çÃæ\\µÚÒ»¹Ø\\1.s.jpg");	
-	loadimage(&img2,"½çÃæ\\µÚ¶ş¹Ø\\2.s.jpg");
-	loadimage(&img3,"½çÃæ\\µÚÈı¹Ø\\3.s.jpg");
-	loadimage(&img4,"½çÃæ\\µÚËÄ¹Ø\\4.s.jpg");
-	loadimage(&img5,"½çÃæ\\µÚÎå¹Ø\\5.s.jpg");
+	loadimage(&img0,"ç•Œé¢\\000.jpg");
+	loadimage(&img1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.s.jpg");	
+	loadimage(&img2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.s.jpg");
+	loadimage(&img3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.s.jpg");
+	loadimage(&img4,"ç•Œé¢\\ç¬¬å››å…³\\4.s.jpg");
+	loadimage(&img5,"ç•Œé¢\\ç¬¬äº”å…³\\5.s.jpg");
 	putimage(0,0,&img0);
 	putimage(530,92,&img1);
 	putimage(530,186,&img2);
@@ -622,30 +622,30 @@ void main_menu2()
 	{
 	    if (pass[1][0]==0)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.0.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.0.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[1][0]==1)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.1.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.1.jpg");	
             putimage(535,92,&im1);
 		}
 	    if (pass[1][0]==2)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.2.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.2.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[1][0]==3)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.3.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.3.jpg");	
 	        putimage(535,92,&im1);
 		}
 	}
@@ -653,30 +653,30 @@ void main_menu2()
 	{
 	    if (pass[1][1]==0)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.0.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.0.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[1][1]==1)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.1.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.1.jpg");	
             putimage(535,186,&im2);
 		}
 	    if (pass[1][1]==2)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.2.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.2.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[1][1]==3)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.3.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.3.jpg");	
 	        putimage(535,186,&im2);
 		}
 	}
@@ -684,30 +684,30 @@ void main_menu2()
 	{
 	    if (pass[1][2]==0)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.0.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.0.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[1][2]==1)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.1.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.1.jpg");	
             putimage(535,280,&im3);
 		}
 	    if (pass[1][2]==2)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.2.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.2.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[1][2]==3)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.3.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.3.jpg");	
 	        putimage(535,280,&im3);
 		}
 	}
@@ -715,30 +715,30 @@ void main_menu2()
 	{
 	    if (pass[1][3]==0)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.0.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.0.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[1][3]==1)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.1.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.1.jpg");	
             putimage(535,374,&im4);
 		}
 	    if (pass[1][3]==2)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.2.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.2.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[1][3]==3)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.3.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.3.jpg");	
 	        putimage(535,374,&im4);
 		}
 	}
@@ -746,30 +746,30 @@ void main_menu2()
 	{
 	    if (pass[1][4]==0)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.0.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.0.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[1][4]==1)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.1.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.1.jpg");	
             putimage(535,468,&im5);
 		}
 	    if (pass[1][4]==2)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.2.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.2.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[1][4]==3)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.3.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.3.jpg");	
 	        putimage(535,468,&im5);
 		}
 	}
@@ -785,12 +785,12 @@ void main_menu3()
 			break;
 	}
 	IMAGE img0,img1,img2,img3,img4,img5,i1,i2,i3,i4,i5,im1,im2,im3,im4,im5;
-	loadimage(&img0,"½çÃæ\\000.jpg");
-	loadimage(&img1,"½çÃæ\\µÚÒ»¹Ø\\1.s.jpg");	
-	loadimage(&img2,"½çÃæ\\µÚ¶ş¹Ø\\2.s.jpg");
-	loadimage(&img3,"½çÃæ\\µÚÈı¹Ø\\3.s.jpg");
-	loadimage(&img4,"½çÃæ\\µÚËÄ¹Ø\\4.s.jpg");
-	loadimage(&img5,"½çÃæ\\µÚÎå¹Ø\\5.s.jpg");
+	loadimage(&img0,"ç•Œé¢\\000.jpg");
+	loadimage(&img1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.s.jpg");	
+	loadimage(&img2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.s.jpg");
+	loadimage(&img3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.s.jpg");
+	loadimage(&img4,"ç•Œé¢\\ç¬¬å››å…³\\4.s.jpg");
+	loadimage(&img5,"ç•Œé¢\\ç¬¬äº”å…³\\5.s.jpg");
 	putimage(0,0,&img0);
 	putimage(530,92,&img1);
 	putimage(530,186,&img2);
@@ -801,30 +801,30 @@ void main_menu3()
 	{
 	    if (pass[2][0]==0)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.0.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.0.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[2][0]==1)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.1.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.1.jpg");	
             putimage(535,92,&im1);
 		}
 	    if (pass[2][0]==2)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.2.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.2.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[2][0]==3)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.3.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.3.jpg");	
 	        putimage(535,92,&im1);
 		}
 	}
@@ -832,30 +832,30 @@ void main_menu3()
 	{
 	    if (pass[2][1]==0)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.0.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.0.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[2][1]==1)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.1.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.1.jpg");	
             putimage(535,186,&im2);
 		}
 	    if (pass[2][1]==2)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.2.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.2.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[2][1]==3)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.3.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.3.jpg");	
 	        putimage(535,186,&im2);
 		}
 	}
@@ -863,30 +863,30 @@ void main_menu3()
 	{
 	    if (pass[2][2]==0)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.0.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.0.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[2][2]==1)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.1.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.1.jpg");	
             putimage(535,280,&im3);
 		}
 	    if (pass[2][2]==2)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.2.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.2.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[2][2]==3)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.3.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.3.jpg");	
 	        putimage(535,280,&im3);
 		}
 	}
@@ -894,30 +894,30 @@ void main_menu3()
 	{
 	    if (pass[2][3]==0)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.0.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.0.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[2][3]==1)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.1.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.1.jpg");	
             putimage(535,374,&im4);
 		}
 	    if (pass[2][3]==2)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.2.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.2.jpg");	
 	        putimage(535,374,&im1);
 		}
 	    if (pass[2][3]==3)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.3.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.3.jpg");	
 	        putimage(535,374,&im4);
 		}
 	}
@@ -925,30 +925,30 @@ void main_menu3()
 	{
 	    if (pass[2][4]==0)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.0.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.0.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[2][4]==1)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.1.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.1.jpg");	
             putimage(535,468,&im5);
 		}
 	    if (pass[2][4]==2)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.2.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.2.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[2][4]==3)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.3.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.3.jpg");	
 	        putimage(535,468,&im5);
 		}
 	}
@@ -964,12 +964,12 @@ void main_menu4()
 			break;
 	}
 	IMAGE img0,img1,img2,img3,img4,img5,i1,i2,i3,i4,i5,im1,im2,im3,im4,im5;
-	loadimage(&img0,"½çÃæ\\000.jpg");
-	loadimage(&img1,"½çÃæ\\µÚÒ»¹Ø\\1.s.jpg");	
-	loadimage(&img2,"½çÃæ\\µÚ¶ş¹Ø\\2.s.jpg");
-	loadimage(&img3,"½çÃæ\\µÚÈı¹Ø\\3.s.jpg");
-	loadimage(&img4,"½çÃæ\\µÚËÄ¹Ø\\4.s.jpg");
-	loadimage(&img5,"½çÃæ\\µÚÎå¹Ø\\5.s.jpg");
+	loadimage(&img0,"ç•Œé¢\\000.jpg");
+	loadimage(&img1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.s.jpg");	
+	loadimage(&img2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.s.jpg");
+	loadimage(&img3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.s.jpg");
+	loadimage(&img4,"ç•Œé¢\\ç¬¬å››å…³\\4.s.jpg");
+	loadimage(&img5,"ç•Œé¢\\ç¬¬äº”å…³\\5.s.jpg");
 	putimage(0,0,&img0);
 	putimage(530,92,&img1);
 	putimage(530,186,&img2);
@@ -980,30 +980,30 @@ void main_menu4()
 	{
 	    if (pass[3][0]==0)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.0.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.0.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[3][0]==1)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.1.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.1.jpg");	
             putimage(535,92,&im1);
 		}
 	    if (pass[3][0]==2)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.2.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.2.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[3][0]==3)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.3.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.3.jpg");	
 	        putimage(535,92,&im1);
 		}
 	}
@@ -1011,30 +1011,30 @@ void main_menu4()
 	{
 	    if (pass[3][1]==0)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.0.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.0.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[3][1]==1)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.1.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.1.jpg");	
             putimage(535,186,&im2);
 		}
 	    if (pass[3][1]==2)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.2.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.2.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[3][1]==3)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.3.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.3.jpg");	
 	        putimage(535,186,&im2);
 		}
 	}
@@ -1042,30 +1042,30 @@ void main_menu4()
 	{
 	    if (pass[3][2]==0)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.0.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.0.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[3][2]==1)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.1.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.1.jpg");	
             putimage(535,280,&im3);
 		}
 	    if (pass[3][2]==2)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.2.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.2.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[3][2]==3)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.3.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.3.jpg");	
 	        putimage(535,280,&im3);
 		}
 	}
@@ -1073,30 +1073,30 @@ void main_menu4()
 	{
 	    if (pass[3][3]==0)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.0.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.0.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[3][3]==1)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.1.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.1.jpg");	
             putimage(535,374,&im4);
 		}
 	    if (pass[3][3]==2)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.2.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.2.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[3][3]==3)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.3.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.3.jpg");	
 	        putimage(535,374,&im4);
 		}
 	}
@@ -1104,30 +1104,30 @@ void main_menu4()
 	{
 	    if (pass[3][4]==0)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.0.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.0.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[3][4]==1)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.1.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.1.jpg");	
             putimage(535,468,&im5);
 		}
 	    if (pass[3][4]==2)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.2.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.2.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[3][4]==3)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.3.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.3.jpg");	
 	        putimage(535,468,&im5);
 		}
 	}
@@ -1143,12 +1143,12 @@ void main_menu5()
 			break;
 	}
 	IMAGE img0,img1,img2,img3,img4,img5,i1,i2,i3,i4,i5,im1,im2,im3,im4,im5;
-	loadimage(&img0,"½çÃæ\\000.jpg");
-	loadimage(&img1,"½çÃæ\\µÚÒ»¹Ø\\1.s.jpg");	
-	loadimage(&img2,"½çÃæ\\µÚ¶ş¹Ø\\2.s.jpg");
-	loadimage(&img3,"½çÃæ\\µÚÈı¹Ø\\3.s.jpg");
-	loadimage(&img4,"½çÃæ\\µÚËÄ¹Ø\\4.s.jpg");
-	loadimage(&img5,"½çÃæ\\µÚÎå¹Ø\\5.s.jpg");
+	loadimage(&img0,"ç•Œé¢\\000.jpg");
+	loadimage(&img1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.s.jpg");	
+	loadimage(&img2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.s.jpg");
+	loadimage(&img3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.s.jpg");
+	loadimage(&img4,"ç•Œé¢\\ç¬¬å››å…³\\4.s.jpg");
+	loadimage(&img5,"ç•Œé¢\\ç¬¬äº”å…³\\5.s.jpg");
 	putimage(0,0,&img0);
 	putimage(530,92,&img1);
 	putimage(530,186,&img2);
@@ -1159,30 +1159,30 @@ void main_menu5()
 	{
 	    if (pass[4][0]==0)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.0.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.0.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[4][0]==1)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.1.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.1.jpg");	
             putimage(535,92,&im1);
 		}
 	    if (pass[4][0]==2)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.2.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.2.jpg");	
 	        putimage(535,92,&im1);
 		}
 	    if (pass[4][0]==3)
 		{
-			loadimage(&i1,"½çÃæ\\1.bmp");
+			loadimage(&i1,"ç•Œé¢\\1.bmp");
 			putimage(535,92,&i1);
-	        loadimage(&im1,"½çÃæ\\µÚÒ»¹Ø\\1.3.jpg");	
+	        loadimage(&im1,"ç•Œé¢\\ç¬¬ä¸€å…³\\1.3.jpg");	
 	        putimage(535,92,&im1);
 		}
 	}
@@ -1190,30 +1190,30 @@ void main_menu5()
 	{
 	    if (pass[4][1]==0)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.0.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.0.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[4][1]==1)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.1.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.1.jpg");	
             putimage(535,186,&im2);
 		}
 	    if (pass[4][1]==2)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.2.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.2.jpg");	
 	        putimage(535,186,&im2);
 		}
 	    if (pass[4][1]==3)
 		{
-			loadimage(&i2,"½çÃæ\\2.bmp");
+			loadimage(&i2,"ç•Œé¢\\2.bmp");
 			putimage(535,186,&i2);
-	        loadimage(&im2,"½çÃæ\\µÚ¶ş¹Ø\\2.3.jpg");	
+	        loadimage(&im2,"ç•Œé¢\\ç¬¬äºŒå…³\\2.3.jpg");	
 	        putimage(535,186,&im2);
 		}
 	}
@@ -1221,30 +1221,30 @@ void main_menu5()
 	{
 	    if (pass[4][2]==0)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.0.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.0.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[4][2]==1)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.1.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.1.jpg");	
             putimage(535,280,&im3);
 		}
 	    if (pass[4][2]==2)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.2.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.2.jpg");	
 	        putimage(535,280,&im3);
 		}
 	    if (pass[4][2]==3)
 		{
-			loadimage(&i3,"½çÃæ\\3.bmp");
+			loadimage(&i3,"ç•Œé¢\\3.bmp");
 			putimage(535,280,&i3);
-	        loadimage(&im3,"½çÃæ\\µÚÈı¹Ø\\3.3.jpg");	
+	        loadimage(&im3,"ç•Œé¢\\ç¬¬ä¸‰å…³\\3.3.jpg");	
 	        putimage(535,280,&im3);
 		}
 	}
@@ -1252,30 +1252,30 @@ void main_menu5()
 	{
 	    if (pass[4][3]==0)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.0.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.0.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[4][3]==1)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.1.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.1.jpg");	
             putimage(535,374,&im4);
 		}
 	    if (pass[4][3]==2)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.2.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.2.jpg");	
 	        putimage(535,374,&im4);
 		}
 	    if (pass[4][3]==3)
 		{
-			loadimage(&i4,"½çÃæ\\4.bmp");
+			loadimage(&i4,"ç•Œé¢\\4.bmp");
 			putimage(535,374,&i4);
-	        loadimage(&im4,"½çÃæ\\µÚËÄ¹Ø\\4.3.jpg");	
+	        loadimage(&im4,"ç•Œé¢\\ç¬¬å››å…³\\4.3.jpg");	
 	        putimage(535,374,&im4);
 		}
 	}
@@ -1283,30 +1283,30 @@ void main_menu5()
 	{
 	    if (pass[4][4]==0)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.0.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.0.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[4][4]==1)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.1.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.1.jpg");	
             putimage(535,468,&im5);
 		}
 	    if (pass[4][4]==2)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.2.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.2.jpg");	
 	        putimage(535,468,&im5);
 		}
 	    if (pass[4][4]==3)
 		{
-			loadimage(&i5,"½çÃæ\\5.bmp");
+			loadimage(&i5,"ç•Œé¢\\5.bmp");
 			putimage(535,468,&i5);
-	        loadimage(&im5,"½çÃæ\\µÚÎå¹Ø\\5.3.jpg");	
+	        loadimage(&im5,"ç•Œé¢\\ç¬¬äº”å…³\\5.3.jpg");	
 	        putimage(535,468,&im5);
 		}
 	}
@@ -1316,7 +1316,7 @@ void menu()
 	int a,b,c;
     while(true)
 	{
-		//´¦ÀíÊó±êÏûÏ¢
+		//å¤„ç†é¼ æ ‡æ¶ˆæ¯
 		while(MouseHit())
 		{
 			mmsg = GetMouseMsg();
@@ -1334,7 +1334,7 @@ void menu()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -1476,7 +1476,7 @@ void pass1()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -1561,7 +1561,7 @@ void pass1()
 									{
 										isMouseDown=false;
 									    IMAGE img0;
-	                                    loadimage(&img0,"½çÃæ\\001.jpg");
+	                                    loadimage(&img0,"ç•Œé¢\\001.jpg");
 	                                    putimage(0,0,&img0);
                                         menu();
 									}
@@ -1700,7 +1700,7 @@ void pass2()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -1784,7 +1784,7 @@ void pass2()
 									{
 										isMouseDown=false;
 									    IMAGE img0;
-	                                    loadimage(&img0,"½çÃæ\\001.jpg");
+	                                    loadimage(&img0,"ç•Œé¢\\001.jpg");
 	                                    putimage(0,0,&img0);
                                         menu();
 									}
@@ -1895,7 +1895,7 @@ void pass3()
 {
 	int temp=0;
 	int a,b,c;
-	mciSendString("close mymusic2",NULL,0,NULL);//¹Ø±ÕÊ¤ÀûÒôĞ§
+	mciSendString("close mymusic2",NULL,0,NULL);//å…³é—­èƒœåˆ©éŸ³æ•ˆ
 	char test[1];
 	int num;
 	for (a=0;a<5;a++)
@@ -1923,7 +1923,7 @@ void pass3()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -2008,7 +2008,7 @@ void pass3()
 									{
 										isMouseDown=false;
 									    IMAGE img0;
-	                                    loadimage(&img0,"½çÃæ\\001.jpg");
+	                                    loadimage(&img0,"ç•Œé¢\\001.jpg");
 	                                    putimage(0,0,&img0);
                                         menu();
 									}
@@ -2147,7 +2147,7 @@ void pass4()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -2232,7 +2232,7 @@ void pass4()
 									{
 										isMouseDown=false;
 									    IMAGE img0;
-	                                    loadimage(&img0,"½çÃæ\\001.jpg");
+	                                    loadimage(&img0,"ç•Œé¢\\001.jpg");
 	                                    putimage(0,0,&img0);
                                         menu();
 									}
@@ -2371,7 +2371,7 @@ void pass5()
 			r1.h = 554;	
 			if(IsInRect(mouseX, mouseY, r1)) 
 			{
-				//·µ»Ø°´¼üÏìÓ¦
+				//è¿”å›æŒ‰é”®å“åº”
 				if(isMouseDown)
 				{
 					isMouseDown=false;
@@ -2456,7 +2456,7 @@ void pass5()
 									{
 										isMouseDown=false;
 									    IMAGE img0;
-	                                    loadimage(&img0,"½çÃæ\\001.jpg");
+	                                    loadimage(&img0,"ç•Œé¢\\001.jpg");
 	                                    putimage(0,0,&img0);
                                         menu();
 									}
@@ -2568,22 +2568,22 @@ void set()
     IMAGE img;
 	if (temp_music[0]==1&&temp_music[1]==1)
 	{
-	    loadimage(&img,"½çÃæ\\set1.jpg");
+	    loadimage(&img,"ç•Œé¢\\set1.jpg");
 	    putimage(0,0,&img);
 	}
 	if (temp_music[0]==1&&temp_music[1]==0)
 	{
-	    loadimage(&img,"½çÃæ\\set2.jpg");
+	    loadimage(&img,"ç•Œé¢\\set2.jpg");
 	    putimage(0,0,&img);
 	}
 	if (temp_music[0]==0&&temp_music[1]==1)
 	{
-	    loadimage(&img,"½çÃæ\\set3.jpg");
+	    loadimage(&img,"ç•Œé¢\\set3.jpg");
 	    putimage(0,0,&img);
 	}
 	if (temp_music[0]==0&&temp_music[1]==0)
 	{
-	    loadimage(&img,"½çÃæ\\set4.jpg");
+	    loadimage(&img,"ç•Œé¢\\set4.jpg");
 	    putimage(0,0,&img);
 	}
 	set_choose();
@@ -2592,7 +2592,7 @@ void set()
 
 void Game1_1 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -2604,7 +2604,7 @@ void Game1_1 ()
 	}
     if(bgmusic==1)
 	{
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
 	}
 	direction=4;
@@ -2622,7 +2622,7 @@ void Game1_1 ()
 	N=5;
     t0=0;
 
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=10;food1_2=15;food1_3=20;
     food2_1=2;food2_2=3;food2_3=4;
     food3_1=0;food3_2=1;food3_3=1;
@@ -2638,7 +2638,7 @@ void Game1_1 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0;
 	 Black1_1();
@@ -2656,9 +2656,9 @@ void Game1_1 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -2684,7 +2684,7 @@ void Game1_1 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -2700,7 +2700,7 @@ void Game1_1 ()
 	 if(a!=0&&bgmusic==1)
 	 {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL); 
 	 }
 	 if(a==1)
@@ -2732,7 +2732,7 @@ void Game1_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -2743,8 +2743,8 @@ void Game1_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-         char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+         char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -2778,7 +2778,7 @@ void Game1_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -2789,8 +2789,8 @@ void Game1_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -2824,7 +2824,7 @@ void Game1_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -2835,8 +2835,8 @@ void Game1_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -2866,7 +2866,7 @@ void Game1_1 ()
 			 if(bgmusic==1)
 			 {
 			      mciSendString("close mymusic1",NULL,0,NULL);
-		          mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		          mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		          mciSendString("play mymusic3",NULL,0,NULL); 
 			 }
 		 }
@@ -2880,7 +2880,7 @@ void Game1_1 ()
 
 void Game1_2 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -2892,7 +2892,7 @@ void Game1_2 ()
 	}
 	if(bgmusic==1)
 	{
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
 	}
     direction=4;
@@ -2909,7 +2909,7 @@ void Game1_2 ()
 	bool_t=0;
 	N=5;
     t0=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=15;food1_2=20;food1_3=25;
     food2_1=2;food2_2=3;food2_3=5;
     food3_1=0;food3_2=1;food3_3=1;
@@ -2925,7 +2925,7 @@ void Game1_2 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0;
 	 Black1_2();
@@ -2942,9 +2942,9 @@ void Game1_2 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -2969,7 +2969,7 @@ void Game1_2 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -2983,7 +2983,7 @@ void Game1_2 ()
 	 if(a!=0&&bgmusic==1)
 	 {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
 	 }
 	 if(a==1)
@@ -3015,7 +3015,7 @@ void Game1_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3026,8 +3026,8 @@ void Game1_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3061,7 +3061,7 @@ void Game1_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3072,8 +3072,8 @@ void Game1_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3107,7 +3107,7 @@ void Game1_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3118,8 +3118,8 @@ void Game1_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3146,7 +3146,7 @@ void Game1_2 ()
 		 if(bgmusic==1)
 		 {
 			 mciSendString("close mymusic1",NULL,0,NULL);
-		     mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		     mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		     mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 putimage(0,0,&img4);
@@ -3160,7 +3160,7 @@ void Game1_2 ()
 
 void Game1_3 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -3172,7 +3172,7 @@ void Game1_3 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -3189,7 +3189,7 @@ void Game1_3 ()
 	bool_t=0;
 	N=5;
     t0=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=20;food1_2=25;food1_3=30;
     food2_1=4;food2_2=6;food2_3=8;
     food3_1=1;food3_2=2;food3_3=2;
@@ -3205,7 +3205,7 @@ void Game1_3 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0;
 	 Black1_3();
@@ -3222,9 +3222,9 @@ void Game1_3 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -3249,7 +3249,7 @@ void Game1_3 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -3263,7 +3263,7 @@ void Game1_3 ()
       if(a!=0&&bgmusic==1)
 	  {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
 	  }
 	 if(a==1)
@@ -3295,7 +3295,7 @@ void Game1_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3306,8 +3306,8 @@ void Game1_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3341,7 +3341,7 @@ void Game1_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3352,8 +3352,8 @@ void Game1_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3387,7 +3387,7 @@ void Game1_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3398,8 +3398,8 @@ void Game1_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3410,7 +3410,7 @@ void Game1_3 ()
 		 if(bgmusic==1)
 		 {
 	         mciSendString("close mymusic1",NULL,0,NULL);
-	         mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	         mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	         mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[0][2])
@@ -3440,7 +3440,7 @@ void Game1_3 ()
 
 void Game1_4 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -3452,7 +3452,7 @@ void Game1_4 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -3469,7 +3469,7 @@ void Game1_4 ()
 	bool_t=0;
 	N=5;
     t0=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=25;food1_2=35;food1_3=40;
     food2_1=7;food2_2=10;food2_3=11;
     food3_1=2;food3_2=2;food3_3=3;
@@ -3485,7 +3485,7 @@ void Game1_4 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0;
 	 Black1_4();
@@ -3502,9 +3502,9 @@ void Game1_4 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -3529,7 +3529,7 @@ void Game1_4 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -3543,7 +3543,7 @@ void Game1_4 ()
 	 if(a!=0&&bgmusic==1)
 	 {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -3575,7 +3575,7 @@ void Game1_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3586,8 +3586,8 @@ void Game1_4 ()
 	     char q[60];
 	     sprintf(q, "X%d               X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,16*UNIT, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3621,7 +3621,7 @@ void Game1_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3632,8 +3632,8 @@ void Game1_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3667,7 +3667,7 @@ void Game1_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3678,8 +3678,8 @@ void Game1_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3690,7 +3690,7 @@ void Game1_4 ()
 		 if(bgmusic==1)
 		{
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[0][3])
@@ -3720,7 +3720,7 @@ void Game1_4 ()
 
 void Game1_5 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -3732,7 +3732,7 @@ void Game1_5 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -3749,7 +3749,7 @@ void Game1_5 ()
 	bool_t=0;
 	N=5;
     t0=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=30;food1_2=40;food1_3=45;
     food2_1=7;food2_2=10;food2_3=12;
     food3_1=2;food3_2=2;food3_3=3;
@@ -3765,7 +3765,7 @@ void Game1_5 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0;
 	 Black1_5();
@@ -3782,9 +3782,9 @@ void Game1_5 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -3809,7 +3809,7 @@ void Game1_5 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -3823,7 +3823,7 @@ void Game1_5 ()
 	 if(a!=0&&bgmusic==1)
 	 {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -3855,7 +3855,7 @@ void Game1_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3866,8 +3866,8 @@ void Game1_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 	//	 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3901,7 +3901,7 @@ void Game1_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3912,8 +3912,8 @@ void Game1_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass1();
@@ -3947,7 +3947,7 @@ void Game1_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -3958,8 +3958,8 @@ void Game1_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-         char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+         char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass1();
 		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -3970,7 +3970,7 @@ void Game1_5 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[0][4])
@@ -4000,7 +4000,7 @@ void Game1_5 ()
 
 void Game2_1()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -4012,7 +4012,7 @@ void Game2_1()
 	}	
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -4038,7 +4038,7 @@ void Game2_1()
 	props_x=2;
 	props_y=2;
     N=5;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=20;food1_2=30;food1_3=35;
     food2_1=5;food2_2=6;food2_3=8;
     food3_1=1;food3_2=2;food3_3=2;
@@ -4053,7 +4053,7 @@ void Game2_1()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0,b=0;
@@ -4071,9 +4071,9 @@ void Game2_1()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -4098,7 +4098,7 @@ void Game2_1()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -4112,7 +4112,7 @@ void Game2_1()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -4144,7 +4144,7 @@ void Game2_1()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4155,8 +4155,8 @@ void Game2_1()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -4190,7 +4190,7 @@ void Game2_1()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4201,8 +4201,8 @@ void Game2_1()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -4236,7 +4236,7 @@ void Game2_1()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4247,8 +4247,8 @@ void Game2_1()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -4259,7 +4259,7 @@ void Game2_1()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[1][0])
@@ -4289,7 +4289,7 @@ void Game2_1()
 
 void Game2_2 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -4301,7 +4301,7 @@ void Game2_2 ()
 	}	
     if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
     direction=4;
@@ -4327,7 +4327,7 @@ void Game2_2 ()
 	props_x=2;
 	props_y=2;
    N=5;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=25;food1_2=35;food1_3=40;
     food2_1=6;food2_2=7;food2_3=10;
     food3_1=1;food3_2=2;food3_3=2;
@@ -4342,7 +4342,7 @@ void Game2_2 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0,b=0;
@@ -4360,9 +4360,9 @@ void Game2_2 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -4387,7 +4387,7 @@ void Game2_2 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -4403,7 +4403,7 @@ void Game2_2 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -4435,7 +4435,7 @@ void Game2_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4446,8 +4446,8 @@ void Game2_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-         char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+         char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 	 }
@@ -4480,7 +4480,7 @@ void Game2_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4491,8 +4491,8 @@ void Game2_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 	 }
@@ -4525,7 +4525,7 @@ void Game2_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4536,8 +4536,8 @@ void Game2_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 	 }
@@ -4547,7 +4547,7 @@ void Game2_2 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[1][1])
@@ -4578,7 +4578,7 @@ void Game2_2 ()
 
 void Game2_3 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -4590,7 +4590,7 @@ void Game2_3 ()
 	}	
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -4616,7 +4616,7 @@ void Game2_3 ()
 	props_x=2;
 	props_y=2;
    N=5;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=30;food1_2=35;food1_3=40;
     food2_1=8;food2_2=8;food2_3=12;
     food3_1=1;food3_2=2;food3_3=3;
@@ -4631,7 +4631,7 @@ void Game2_3 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0,b=0;
@@ -4649,9 +4649,9 @@ void Game2_3 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -4676,7 +4676,7 @@ void Game2_3 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -4692,7 +4692,7 @@ void Game2_3 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -4724,7 +4724,7 @@ void Game2_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4735,8 +4735,8 @@ void Game2_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -4770,7 +4770,7 @@ void Game2_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4781,8 +4781,8 @@ void Game2_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 	 }
@@ -4815,7 +4815,7 @@ void Game2_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -4826,8 +4826,8 @@ void Game2_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -4838,7 +4838,7 @@ void Game2_3 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[1][2])
@@ -4869,7 +4869,7 @@ void Game2_3 ()
 
 void Game2_4 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -4881,7 +4881,7 @@ void Game2_4 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	
@@ -4908,7 +4908,7 @@ void Game2_4 ()
 	props_x=2;
 	props_y=2;
    N=5;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=35;food1_2=45;food1_3=50;
     food2_1=9;food2_2=12;food2_3=16;
     food3_1=2;food3_2=3;food3_3=5;
@@ -4923,7 +4923,7 @@ void Game2_4 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0,b=0;
@@ -4941,9 +4941,9 @@ void Game2_4 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -4968,7 +4968,7 @@ void Game2_4 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -4984,7 +4984,7 @@ void Game2_4 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2 from 0",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -5016,7 +5016,7 @@ void Game2_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5027,8 +5027,8 @@ void Game2_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -5062,7 +5062,7 @@ void Game2_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5073,8 +5073,8 @@ void Game2_4 ()
 	     char q[60];
 	     sprintf(q, "X%d               X%d                  X%d ",count1,count2,count3);
          outtextxy(13*UNIT,16*UNIT, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 //		 mciSendString("close mymusic2",NULL,0,NULL);
 		 back_pass2();
@@ -5108,7 +5108,7 @@ void Game2_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5119,8 +5119,8 @@ void Game2_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 	 }
@@ -5130,7 +5130,7 @@ void Game2_4 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[1][3])
@@ -5161,7 +5161,7 @@ void Game2_4 ()
 
 void Game2_5 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -5173,7 +5173,7 @@ void Game2_5 ()
 	}	
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 
@@ -5200,7 +5200,7 @@ void Game2_5 ()
 	props_x=2;
 	props_y=2;
    N=5;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=40;food1_2=50;food1_3=55;
     food2_1=12;food2_2=15;food2_3=17;
     food3_1=3;food3_2=4;food3_3=5;
@@ -5215,7 +5215,7 @@ void Game2_5 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0,b=0;
@@ -5233,9 +5233,9 @@ void Game2_5 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -5260,7 +5260,7 @@ void Game2_5 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -5276,7 +5276,7 @@ void Game2_5 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -5308,7 +5308,7 @@ void Game2_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5319,8 +5319,8 @@ void Game2_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-         char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+         char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5354,7 +5354,7 @@ void Game2_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5365,8 +5365,8 @@ void Game2_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5400,7 +5400,7 @@ void Game2_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5411,8 +5411,8 @@ void Game2_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass2();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5423,7 +5423,7 @@ void Game2_5 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[1][4])
@@ -5454,7 +5454,7 @@ void Game2_5 ()
 
 void Game3_1 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -5466,7 +5466,7 @@ void Game3_1 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;	
@@ -5486,12 +5486,12 @@ void Game3_1 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=20;food1_2=30;food1_3=40;
     food2_1=5;food2_2=7;food2_3=10;
     food3_1=1;food3_2=1;food3_3=3;
@@ -5507,7 +5507,7 @@ void Game3_1 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0;
@@ -5525,9 +5525,9 @@ void Game3_1 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -5554,7 +5554,7 @@ void Game3_1 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -5570,7 +5570,7 @@ void Game3_1 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -5602,7 +5602,7 @@ void Game3_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5613,8 +5613,8 @@ void Game3_1 ()
 	     char q[60];
 	     sprintf(q, "X%d               X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5648,7 +5648,7 @@ void Game3_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5659,8 +5659,8 @@ void Game3_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5694,7 +5694,7 @@ void Game3_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5705,8 +5705,8 @@ void Game3_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5717,7 +5717,7 @@ void Game3_1 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[2][0])
@@ -5748,7 +5748,7 @@ void Game3_1 ()
 
 void Game3_2 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -5760,7 +5760,7 @@ void Game3_2 ()
 	}	
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
    direction=4;
@@ -5780,12 +5780,12 @@ void Game3_2 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=30;food1_2=35;food1_3=45;//
     food2_1=5;food2_2=6;food2_3=10;//
     food3_1=1;food3_2=2;food3_3=3;//
@@ -5801,7 +5801,7 @@ void Game3_2 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0;
@@ -5819,9 +5819,9 @@ void Game3_2 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -5848,7 +5848,7 @@ void Game3_2 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -5864,7 +5864,7 @@ void Game3_2 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -5896,7 +5896,7 @@ void Game3_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5907,8 +5907,8 @@ void Game3_2 ()
 	     char q[60];
 	     sprintf(q, "X%d              X%d                  X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5942,7 +5942,7 @@ void Game3_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5953,8 +5953,8 @@ void Game3_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -5988,7 +5988,7 @@ void Game3_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -5999,8 +5999,8 @@ void Game3_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6011,7 +6011,7 @@ void Game3_2 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[2][1])
@@ -6042,7 +6042,7 @@ void Game3_2 ()
 
 void Game3_3 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -6054,7 +6054,7 @@ void Game3_3 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -6074,12 +6074,12 @@ void Game3_3 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=35;food1_2=40;food1_3=45;//35
     food2_1=10;food2_2=13;food2_3=15;//10
     food3_1=2;food3_2=3;food3_3=4;//2
@@ -6095,7 +6095,7 @@ void Game3_3 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0;
@@ -6113,9 +6113,9 @@ void Game3_3 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -6142,7 +6142,7 @@ void Game3_3 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -6158,7 +6158,7 @@ void Game3_3 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -6190,7 +6190,7 @@ void Game3_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6201,8 +6201,8 @@ void Game3_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6236,7 +6236,7 @@ void Game3_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6247,8 +6247,8 @@ void Game3_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 ///		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6282,7 +6282,7 @@ void Game3_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6293,8 +6293,8 @@ void Game3_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6305,7 +6305,7 @@ void Game3_3 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[2][2])
@@ -6336,7 +6336,7 @@ void Game3_3 ()
 
 void Game3_4 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -6348,7 +6348,7 @@ void Game3_4 ()
 	}	
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;	
@@ -6368,12 +6368,12 @@ void Game3_4 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=40;food1_2=45;food1_3=50;//40
     food2_1=10;food2_2=15;food2_3=15;//10
     food3_1=2;food3_2=3;food3_3=5;//2
@@ -6389,7 +6389,7 @@ void Game3_4 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0;
@@ -6407,9 +6407,9 @@ void Game3_4 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -6436,7 +6436,7 @@ void Game3_4 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -6453,7 +6453,7 @@ void Game3_4 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -6485,7 +6485,7 @@ void Game3_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6496,8 +6496,8 @@ void Game3_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6531,7 +6531,7 @@ void Game3_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6542,8 +6542,8 @@ void Game3_4 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6577,7 +6577,7 @@ void Game3_4 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6597,7 +6597,7 @@ void Game3_4 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[2][3])
@@ -6628,7 +6628,7 @@ void Game3_4 ()
 
 void Game3_5 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -6640,7 +6640,7 @@ void Game3_5 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;	
@@ -6660,12 +6660,12 @@ void Game3_5 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=45;food1_2=55;food1_3=60;//45
     food2_1=10;food2_2=15;food2_3=16;//10
     food3_1=3;food3_2=4;food3_3=5;//3
@@ -6681,7 +6681,7 @@ void Game3_5 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     t0=0;
     int gameover=0;
 	int a=0;
@@ -6699,9 +6699,9 @@ void Game3_5 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -6728,7 +6728,7 @@ void Game3_5 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -6744,7 +6744,7 @@ void Game3_5 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -6776,7 +6776,7 @@ void Game3_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6787,8 +6787,8 @@ void Game3_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6822,7 +6822,7 @@ void Game3_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6833,8 +6833,8 @@ void Game3_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6868,7 +6868,7 @@ void Game3_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -6879,8 +6879,8 @@ void Game3_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass3();
 	//	 mciSendString("close mymusic2",NULL,0,NULL);
@@ -6891,7 +6891,7 @@ void Game3_5 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[2][4])
@@ -6922,7 +6922,7 @@ void Game3_5 ()
 
 void Game4_1 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -6934,7 +6934,7 @@ void Game4_1 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -6954,15 +6954,15 @@ void Game4_1 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
 	bool8=0;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=30;food1_2=40;food1_3=45;//30
     food2_1=6;food2_2=6;food2_3=10;//6
     food3_1=1;food3_2=2;food3_3=3;//1
@@ -6981,7 +6981,7 @@ void Game4_1 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	 Black4_1();
@@ -6998,9 +6998,9 @@ void Game4_1 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -7028,7 +7028,7 @@ void Game4_1 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -7044,7 +7044,7 @@ void Game4_1 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -7076,7 +7076,7 @@ void Game4_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7087,8 +7087,8 @@ void Game4_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 	//	 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7122,7 +7122,7 @@ void Game4_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7133,8 +7133,8 @@ void Game4_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7168,7 +7168,7 @@ void Game4_1 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7179,8 +7179,8 @@ void Game4_1 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7191,7 +7191,7 @@ void Game4_1 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[3][0])
@@ -7222,7 +7222,7 @@ void Game4_1 ()
 
 void Game4_2 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -7234,7 +7234,7 @@ void Game4_2 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -7254,15 +7254,15 @@ void Game4_2 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
 	bool8=0;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=35;food1_2=40;food1_3=45;
     food2_1=8;food2_2=10;food2_3=12;
     food3_1=2;food3_2=3;food3_3=3;
@@ -7280,7 +7280,7 @@ void Game4_2 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	 Black4_2();
@@ -7297,9 +7297,9 @@ void Game4_2 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -7327,7 +7327,7 @@ void Game4_2 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -7343,7 +7343,7 @@ void Game4_2 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -7375,7 +7375,7 @@ void Game4_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7386,8 +7386,8 @@ void Game4_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7421,7 +7421,7 @@ void Game4_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7432,8 +7432,8 @@ void Game4_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 	//	 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7467,7 +7467,7 @@ void Game4_2 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7478,8 +7478,8 @@ void Game4_2 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7490,7 +7490,7 @@ void Game4_2 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[3][1])
@@ -7521,7 +7521,7 @@ void Game4_2 ()
 
 void Game4_3 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -7533,7 +7533,7 @@ void Game4_3 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -7553,15 +7553,15 @@ void Game4_3 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
 	bool8=0;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=40;food1_2=45;food1_3=50;//40
     food2_1=8;food2_2=10;food2_3=15;//8
     food3_1=2;food3_2=3;food3_3=4;//2
@@ -7579,7 +7579,7 @@ void Game4_3 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	 Black4_3();
@@ -7596,9 +7596,9 @@ void Game4_3 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -7626,7 +7626,7 @@ void Game4_3 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -7642,7 +7642,7 @@ void Game4_3 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-        mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2 from 0",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -7674,7 +7674,7 @@ void Game4_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7685,8 +7685,8 @@ void Game4_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7720,7 +7720,7 @@ void Game4_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7731,8 +7731,8 @@ void Game4_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7766,7 +7766,7 @@ void Game4_3 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7777,8 +7777,8 @@ void Game4_3 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -7789,7 +7789,7 @@ void Game4_3 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[3][2])
@@ -7820,7 +7820,7 @@ void Game4_3 ()
 
 void Game4_4 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -7832,7 +7832,7 @@ void Game4_4 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 		direction=4;
@@ -7852,15 +7852,15 @@ count1_3=0;
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
 	bool8=0;
 	N=5;
 	t8=0;
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=40;food1_2=45;food1_3=50;//40
     food2_1=10;food2_2=12;food2_3=15;//10
     food3_1=3;food3_2=4;food3_3=5;//3
@@ -7878,7 +7878,7 @@ count1_3=0;
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	 Black4_4();
@@ -7895,9 +7895,9 @@ count1_3=0;
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -7925,7 +7925,7 @@ count1_3=0;
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -7941,7 +7941,7 @@ count1_3=0;
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -7973,7 +7973,7 @@ count1_3=0;
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -7984,8 +7984,8 @@ count1_3=0;
 	     char q[60];
 	     sprintf(q, "X%d             X%d                X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -8019,7 +8019,7 @@ count1_3=0;
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8030,8 +8030,8 @@ count1_3=0;
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -8065,7 +8065,7 @@ count1_3=0;
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8076,8 +8076,8 @@ count1_3=0;
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -8088,7 +8088,7 @@ count1_3=0;
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[3][3])
@@ -8119,7 +8119,7 @@ count1_3=0;
 
 void Game4_5 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -8131,7 +8131,7 @@ void Game4_5 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -8151,15 +8151,15 @@ void Game4_5 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
 	bool8=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
-	//ÔÚ´Ë´¦ĞŞ¸Ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
+	//åœ¨æ­¤å¤„ä¿®æ”¹
     food1_1=45;food1_2=50;food1_3=55;//45
     food2_1=10;food2_2=15;food2_3=15;//10
     food3_1=3;food3_2=4;food3_3=5;//3
@@ -8177,7 +8177,7 @@ void Game4_5 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	 Black4_5();
@@ -8194,9 +8194,9 @@ void Game4_5 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -8224,7 +8224,7 @@ void Game4_5 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 		 }
 		 else
 		 {
@@ -8240,7 +8240,7 @@ void Game4_5 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2 from 0",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -8272,7 +8272,7 @@ void Game4_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8283,8 +8283,8 @@ void Game4_5 ()
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-		 char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+		 char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 //		 mciSendString("close mymusic2",NULL,0,NULL);
@@ -8318,7 +8318,7 @@ void Game4_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8361,7 +8361,7 @@ void Game4_5 ()
 	     seconds=difftime(t1,t_0);
          min=seconds/60;
 	     seconds=seconds%60;
-	     sprintf(s, "%d·Ö%dÃë",min,seconds);
+	     sprintf(s, "%dåˆ†%dç§’",min,seconds);
          outtextxy(12*UNIT, 14*UNIT, s);
          putimage(12*20,16*20,&foods[0][0],SRCAND);
          putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8371,8 +8371,8 @@ void Game4_5 ()
          putimage(20*20,16*20,&foods[2][1],SRCINVERT);  
 	     char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
-         outtextxy(13*UNIT,325, q);char t[60];//¸öÈË¼ÇÂ¼
-	     sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+         outtextxy(13*UNIT,325, q);char t[60];//ä¸ªäººè®°å½•
+	     sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
          outtextxy(14*UNIT,18*UNIT, q);
 		 back_pass4();
 	 }
@@ -8382,7 +8382,7 @@ void Game4_5 ()
 		 if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		 if (star_judge>pass[3][4])
@@ -8413,7 +8413,7 @@ void Game4_5 ()
 
 void Game5_1 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -8425,7 +8425,7 @@ void Game5_1 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -8445,21 +8445,21 @@ void Game5_1 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
-	bool8=0;//µÚÒ»°Ñ
-	bool9=0;//ÉèÖÃÃÅ³õÊ¼Îª¹Ø±Õ
-	bool10=1;//µÚ¶ş°Ñ
-	bool11=1;//µÚÈı°Ñ
-	bool12=0;//µÚÒ»°ÑÔ¿³××´Ì¬
-	bool13=0;//µÚ¶ş°ÑÔ¿³××´Ì¬
-	bool14=0;//µÚÈı°ÑÔ¿³××´Ì¬
+	bool8=0;//ç¬¬ä¸€æŠŠ
+	bool9=0;//è®¾ç½®é—¨åˆå§‹ä¸ºå…³é—­
+	bool10=1;//ç¬¬äºŒæŠŠ
+	bool11=1;//ç¬¬ä¸‰æŠŠ
+	bool12=0;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+	bool13=0;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+	bool14=0;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
 	int c=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
 	//5-1
 	door_x1=0,door_y1=27;
 	door_x2=0,door_y2=28;
@@ -8478,7 +8478,7 @@ void Game5_1 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	Black5_1();
@@ -8495,9 +8495,9 @@ void Game5_1 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -8525,7 +8525,7 @@ void Game5_1 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 
 		 }
 		 else
@@ -8542,7 +8542,7 @@ void Game5_1 ()
 	if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -8574,7 +8574,7 @@ void Game5_1 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8585,8 +8585,8 @@ void Game5_1 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -8620,7 +8620,7 @@ void Game5_1 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8631,8 +8631,8 @@ void Game5_1 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 	 }
@@ -8665,7 +8665,7 @@ void Game5_1 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8676,8 +8676,8 @@ void Game5_1 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -8688,7 +8688,7 @@ void Game5_1 ()
 		if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		if (star_judge>pass[4][0])
@@ -8719,7 +8719,7 @@ void Game5_1 ()
 
 void Game5_2 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -8731,7 +8731,7 @@ void Game5_2 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -8751,21 +8751,21 @@ void Game5_2 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
-	bool8=0;//µÚÒ»°Ñ
-	bool9=0;//ÉèÖÃÃÅ³õÊ¼Îª¹Ø±Õ
-	bool10=1;//µÚ¶ş°Ñ
-	bool11=1;//µÚÈı°Ñ
-	bool12=0;//µÚÒ»°ÑÔ¿³××´Ì¬
-	bool13=0;//µÚ¶ş°ÑÔ¿³××´Ì¬
-	bool14=0;//µÚÈı°ÑÔ¿³××´Ì¬
+	bool8=0;//ç¬¬ä¸€æŠŠ
+	bool9=0;//è®¾ç½®é—¨åˆå§‹ä¸ºå…³é—­
+	bool10=1;//ç¬¬äºŒæŠŠ
+	bool11=1;//ç¬¬ä¸‰æŠŠ
+	bool12=0;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+	bool13=0;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+	bool14=0;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
 	int c=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
 	//5-1
 	door_x1=0,door_y1=14;
 	door_x2=0,door_y2=15;
@@ -8784,7 +8784,7 @@ void Game5_2 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	Black5_2();
@@ -8801,9 +8801,9 @@ void Game5_2 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -8831,7 +8831,7 @@ void Game5_2 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 
 		 }
 		 else
@@ -8848,7 +8848,7 @@ void Game5_2 ()
 	if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2 from 0",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -8880,7 +8880,7 @@ void Game5_2 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8891,8 +8891,8 @@ void Game5_2 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -8926,7 +8926,7 @@ void Game5_2 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8937,8 +8937,8 @@ void Game5_2 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -8972,7 +8972,7 @@ void Game5_2 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -8983,8 +8983,8 @@ void Game5_2 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -8995,7 +8995,7 @@ void Game5_2 ()
 		if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		if (star_judge>pass[4][1])
@@ -9026,7 +9026,7 @@ void Game5_2 ()
 
 void Game5_3 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -9038,7 +9038,7 @@ void Game5_3 ()
 	}
     if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -9058,21 +9058,21 @@ void Game5_3 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
-	bool8=0;//µÚÒ»°Ñ
-	bool9=0;//ÉèÖÃÃÅ³õÊ¼Îª¹Ø±Õ
-	bool10=1;//µÚ¶ş°Ñ
-	bool11=1;//µÚÈı°Ñ
-	bool12=0;//µÚÒ»°ÑÔ¿³××´Ì¬
-	bool13=0;//µÚ¶ş°ÑÔ¿³××´Ì¬
-	bool14=0;//µÚÈı°ÑÔ¿³××´Ì¬
+	bool8=0;//ç¬¬ä¸€æŠŠ
+	bool9=0;//è®¾ç½®é—¨åˆå§‹ä¸ºå…³é—­
+	bool10=1;//ç¬¬äºŒæŠŠ
+	bool11=1;//ç¬¬ä¸‰æŠŠ
+	bool12=0;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+	bool13=0;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+	bool14=0;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
 	int c=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
 	//5-3
 	door_x1=13,door_y1=0;
 	door_x2=14,door_y2=0;
@@ -9091,7 +9091,7 @@ void Game5_3 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	Black5_3();
@@ -9108,9 +9108,9 @@ void Game5_3 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -9138,7 +9138,7 @@ void Game5_3 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 
 		 }
 		 else
@@ -9155,7 +9155,7 @@ void Game5_3 ()
 		if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2 from 0",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -9187,7 +9187,7 @@ void Game5_3 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9198,8 +9198,8 @@ void Game5_3 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9233,7 +9233,7 @@ void Game5_3 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9244,8 +9244,8 @@ void Game5_3 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9279,7 +9279,7 @@ void Game5_3 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9290,8 +9290,8 @@ void Game5_3 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9302,7 +9302,7 @@ void Game5_3 ()
 		if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		if (star_judge>pass[4][2])
@@ -9333,7 +9333,7 @@ void Game5_3 ()
 
 void Game5_4 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -9345,7 +9345,7 @@ void Game5_4 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//2.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -9365,21 +9365,21 @@ void Game5_4 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
-	bool8=0;//µÚÒ»°Ñ
-	bool9=0;//ÉèÖÃÃÅ³õÊ¼Îª¹Ø±Õ
-	bool10=1;//µÚ¶ş°Ñ
-	bool11=1;//µÚÈı°Ñ
-	bool12=0;//µÚÒ»°ÑÔ¿³××´Ì¬
-	bool13=0;//µÚ¶ş°ÑÔ¿³××´Ì¬
-	bool14=0;//µÚÈı°ÑÔ¿³××´Ì¬
+	bool8=0;//ç¬¬ä¸€æŠŠ
+	bool9=0;//è®¾ç½®é—¨åˆå§‹ä¸ºå…³é—­
+	bool10=1;//ç¬¬äºŒæŠŠ
+	bool11=1;//ç¬¬ä¸‰æŠŠ
+	bool12=0;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+	bool13=0;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+	bool14=0;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
 	int c=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
 	//5-1
 	door_x1=0,door_y1=24;
 	door_x2=0,door_y2=25;
@@ -9398,7 +9398,7 @@ void Game5_4 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	Black5_4();
@@ -9415,9 +9415,9 @@ void Game5_4 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -9445,7 +9445,7 @@ void Game5_4 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 
 		 }
 		 else
@@ -9462,7 +9462,7 @@ void Game5_4 ()
 		if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -9494,7 +9494,7 @@ void Game5_4 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9505,8 +9505,8 @@ void Game5_4 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9540,7 +9540,7 @@ void Game5_4 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9551,8 +9551,8 @@ void Game5_4 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9586,7 +9586,7 @@ void Game5_4 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9597,8 +9597,8 @@ void Game5_4 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                  X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q); 
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9609,7 +9609,7 @@ void Game5_4 ()
 		if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3 from 0",NULL,0,NULL); 
 		 }
 		if (star_judge>pass[4][3])
@@ -9640,7 +9640,7 @@ void Game5_4 ()
 
 void Game5_5 ()
 {
-	snake_move_speed=200;//ÉßÉíÒÆ¶¯ËÙ¶È
+	snake_move_speed=200;//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 	int star_judge;
 	int temp1,temp2,temp3;
 	time_t t_0;
@@ -9652,7 +9652,7 @@ void Game5_5 ()
 	}
 	if(bgmusic==1)
     {
-        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+        mciSendString("open music//1.mp3 alias mymusic1", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic1 repeat",NULL,0,NULL);
     }
 	direction=4;
@@ -9672,21 +9672,21 @@ void Game5_5 ()
 	bool_t=0;
     boolw=0;
 	bool2=0;
-	bool3=0;//Ä¬ÈÏ¹Ø±Õ
-	bool4=0;//Ä¬ÈÏÎ´¼¯Âú
+	bool3=0;//é»˜è®¤å…³é—­
+	bool4=0;//é»˜è®¤æœªé›†æ»¡
 	bool5=1;
 	bool6=1;
 	bool7=0;
-	bool8=0;//µÚÒ»°Ñ
-	bool9=0;//ÉèÖÃÃÅ³õÊ¼Îª¹Ø±Õ
-	bool10=1;//µÚ¶ş°Ñ
-	bool11=1;//µÚÈı°Ñ
-	bool12=0;//µÚÒ»°ÑÔ¿³××´Ì¬
-	bool13=0;//µÚ¶ş°ÑÔ¿³××´Ì¬
-	bool14=0;//µÚÈı°ÑÔ¿³××´Ì¬
+	bool8=0;//ç¬¬ä¸€æŠŠ
+	bool9=0;//è®¾ç½®é—¨åˆå§‹ä¸ºå…³é—­
+	bool10=1;//ç¬¬äºŒæŠŠ
+	bool11=1;//ç¬¬ä¸‰æŠŠ
+	bool12=0;//ç¬¬ä¸€æŠŠé’¥åŒ™çŠ¶æ€
+	bool13=0;//ç¬¬äºŒæŠŠé’¥åŒ™çŠ¶æ€
+	bool14=0;//ç¬¬ä¸‰æŠŠé’¥åŒ™çŠ¶æ€
 	int c=0;
 	N=5;
-	t8=0;//³õÊ¼»¯ÄÜÁ¿Ê±¼ä
+	t8=0;//åˆå§‹åŒ–èƒ½é‡æ—¶é—´
 	//5-1
 	door_x1=0,door_y1=1;
 	door_x2=0,door_y2=2;
@@ -9705,7 +9705,7 @@ void Game5_5 ()
 		{
 		          local_snake[i][j]=chushi_snake[i][j];
 		}
-	}//ÉßÉí³õÊ¼»¯
+	}//è›‡èº«åˆå§‹åŒ–
     int gameover=0;
 	int a=0,b=0;
 	Black5_5();
@@ -9722,9 +9722,9 @@ void Game5_5 ()
 		 }
 		 if(kbhit())
 		 { 
-			char m;//»ñÈ¡ÊäÈë
+			char m;//è·å–è¾“å…¥
 			m=getch();
-            m=tolower(m);//¼ì²é´óĞ¡Ğ´
+            m=tolower(m);//æ£€æŸ¥å¤§å°å†™
 		    switch(m)
 			{
 			    case 'w':if(old_direction!=2)direction=1;break;
@@ -9752,7 +9752,7 @@ void Game5_5 ()
 		         putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][0],SRCAND);
                  putimage(local_snake[i][0]*20,local_snake[i][1]*20,&snake[local_snake[i][2]][1],SRCINVERT);
 			   }
-		       Sleep(snake_move_speed);//ÉßÉíÒÆ¶¯ËÙ¶È
+		       Sleep(snake_move_speed);//è›‡èº«ç§»åŠ¨é€Ÿåº¦
 
 		 }
 		 else
@@ -9769,7 +9769,7 @@ void Game5_5 ()
 	 if(a!=0&&bgmusic==1)
      {
         mciSendString("close mymusic1",NULL,0,NULL);
-		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+		mciSendString("open music//win.mp3 alias mymusic2", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 		mciSendString("play mymusic2",NULL,0,NULL);   
      }
 	 if(a==1)
@@ -9801,7 +9801,7 @@ void Game5_5 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9812,8 +9812,8 @@ void Game5_5 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9847,7 +9847,7 @@ void Game5_5 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9858,8 +9858,8 @@ void Game5_5 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9893,7 +9893,7 @@ void Game5_5 ()
 	   seconds=difftime(t1,t_0);
        min=seconds/60;
 	   seconds=seconds%60;
-	   sprintf(s, "%d·Ö%dÃë",min,seconds);
+	   sprintf(s, "%dåˆ†%dç§’",min,seconds);
        outtextxy(12*UNIT, 14*UNIT, s);
        putimage(12*20,16*20,&foods[0][0],SRCAND);
        putimage(12*20,16*20,&foods[0][1],SRCINVERT);
@@ -9904,8 +9904,8 @@ void Game5_5 ()
 	   char q[60];
 	     sprintf(q, "X%d             X%d                 X%d ",count1,count2,count3);
          outtextxy(13*UNIT,325, q);
-	   char t[60];//¸öÈË¼ÇÂ¼
-	   sprintf(q, "%d·Ö",count1*1+count2*5+count3*10);
+	   char t[60];//ä¸ªäººè®°å½•
+	   sprintf(q, "%dåˆ†",count1*1+count2*5+count3*10);
        outtextxy(14*UNIT,18*UNIT, q);
 	   back_pass5();
 //	   mciSendString("close mymusic2",NULL,0,NULL);
@@ -9916,7 +9916,7 @@ void Game5_5 ()
 		if(bgmusic==1)
 		 {
 	       mciSendString("close mymusic1",NULL,0,NULL);
-	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş  
+	       mciSendString("open music//lose.mp3 alias mymusic3", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶  
 	       mciSendString("play mymusic3",NULL,0,NULL); 
 		 }
 		if (star_judge>pass[4][4])
@@ -9949,20 +9949,20 @@ void Black1_1()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÒ»¹Ø\\m1.1.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸€å…³\\m1.1.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -9972,20 +9972,20 @@ void Black1_2 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÒ»¹Ø\\m1.2.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸€å…³\\m1.2.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -9995,20 +9995,20 @@ void Black1_3 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÒ»¹Ø\\m1.3.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸€å…³\\m1.3.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10018,20 +10018,20 @@ void Black1_4 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÒ»¹Ø\\m1.4.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸€å…³\\m1.4.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10041,20 +10041,20 @@ void Black1_5 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÒ»¹Ø\\m1.5.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸€å…³\\m1.5.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10063,20 +10063,20 @@ void Black2_1 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚ¶ş¹Ø\\m2.1.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äºŒå…³\\m2.1.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10086,20 +10086,20 @@ void Black2_2 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚ¶ş¹Ø\\m2.2.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äºŒå…³\\m2.2.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10109,20 +10109,20 @@ void Black2_3 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚ¶ş¹Ø\\m2.3.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äºŒå…³\\m2.3.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10132,20 +10132,20 @@ void Black2_4 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚ¶ş¹Ø\\m2.4.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äºŒå…³\\m2.4.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10155,20 +10155,20 @@ void Black2_5 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚ¶ş¹Ø\\m2.5.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äºŒå…³\\m2.5.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10178,20 +10178,20 @@ void Black3_1 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÈı¹Ø\\m3.1.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸‰å…³\\m3.1.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10201,20 +10201,20 @@ void Black3_2 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÈı¹Ø\\m3.2.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸‰å…³\\m3.2.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10224,20 +10224,20 @@ void Black3_3 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÈı¹Ø\\m3.3.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸‰å…³\\m3.3.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10247,20 +10247,20 @@ void Black3_4 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÈı¹Ø\\m3.4.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸‰å…³\\m3.4.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10270,20 +10270,20 @@ void Black3_5()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÈı¹Ø\\m3.5.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬ä¸‰å…³\\m3.5.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
 	loadimage(&img4,"material\\t3.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10293,7 +10293,7 @@ void Black4_1 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚËÄ¹Ø\\m4.1.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬å››å…³\\m4.1.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10302,13 +10302,13 @@ void Black4_1 ()
 	loadimage(&img8_1,"material\\t41.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10318,7 +10318,7 @@ void Black4_2 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚËÄ¹Ø\\m4.2.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬å››å…³\\m4.2.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10327,13 +10327,13 @@ void Black4_2 ()
 	loadimage(&img8_1,"material\\t41.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10343,7 +10343,7 @@ void Black4_3 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚËÄ¹Ø\\m4.3.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬å››å…³\\m4.3.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10352,13 +10352,13 @@ void Black4_3 ()
 	loadimage(&img8_1,"material\\t41.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10368,7 +10368,7 @@ void Black4_4()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚËÄ¹Ø\\m4.4.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬å››å…³\\m4.4.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10377,13 +10377,13 @@ void Black4_4()
 	loadimage(&img8_1,"material\\t41.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10393,7 +10393,7 @@ void Black4_5 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚËÄ¹Ø\\m4.5.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬å››å…³\\m4.5.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10402,13 +10402,13 @@ void Black4_5 ()
 	loadimage(&img8_1,"material\\t41.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10417,7 +10417,7 @@ void Black5_1()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÎå¹Ø\\m5.1.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äº”å…³\\m5.1.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10430,13 +10430,13 @@ void Black5_1()
 	loadimage(&img10_1,"material\\mk1.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10446,7 +10446,7 @@ void Black5_2()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÎå¹Ø\\m5.2.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äº”å…³\\m5.2.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10459,13 +10459,13 @@ void Black5_2()
 	loadimage(&img10_1,"material\\mk1.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10475,7 +10475,7 @@ void Black5_3()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÎå¹Ø\\m5.3.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äº”å…³\\m5.3.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10488,13 +10488,13 @@ void Black5_3()
 	loadimage(&img10_1,"material\\mk1.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10504,7 +10504,7 @@ void Black5_4()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÎå¹Ø\\m5.4.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äº”å…³\\m5.4.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10517,13 +10517,13 @@ void Black5_4()
 	loadimage(&img10_1,"material\\mk1.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10533,7 +10533,7 @@ void Black5_5 ()
     initgraph(900, 600);
     cleardevice();
 	setbkmode(TRANSPARENT);
-	loadimage(&img,"½çÃæ\\µÚÎå¹Ø\\m5.5.jpg");
+	loadimage(&img,"ç•Œé¢\\ç¬¬äº”å…³\\m5.5.jpg");
     loadimage(&img1,"material\\20x20px.jpg");
 	loadimage(&img3,"material\\t4-1.jpg");
 	loadimage(&img5,"material\\t4-2.jpg");
@@ -10546,13 +10546,13 @@ void Black5_5 ()
 	loadimage(&img10_1,"material\\mk1.jpg");
 	loadimage(&img6,"material\\food.jpg");
 	loadimage(&img7,"material\\prop.jpg");
-	loadimage(&p1_1,"½çÃæ\\µ¯¿ò\\p1.1.jpg");
-	loadimage(&p1_2,"½çÃæ\\µ¯¿ò\\p1.2.jpg");
-	loadimage(&p2_1,"½çÃæ\\µ¯¿ò\\p2.1.jpg");
-	loadimage(&p2_2,"½çÃæ\\µ¯¿ò\\p2.2.jpg");
-	loadimage(&p3_1,"½çÃæ\\µ¯¿ò\\p3.1.jpg");
-	loadimage(&p3_2,"½çÃæ\\µ¯¿ò\\p3.2.jpg");
-	loadimage(&p0,"½çÃæ\\µ¯¿ò\\p0.jpg");
+	loadimage(&p1_1,"ç•Œé¢\\å¼¹æ¡†\\p1.1.jpg");
+	loadimage(&p1_2,"ç•Œé¢\\å¼¹æ¡†\\p1.2.jpg");
+	loadimage(&p2_1,"ç•Œé¢\\å¼¹æ¡†\\p2.1.jpg");
+	loadimage(&p2_2,"ç•Œé¢\\å¼¹æ¡†\\p2.2.jpg");
+	loadimage(&p3_1,"ç•Œé¢\\å¼¹æ¡†\\p3.1.jpg");
+	loadimage(&p3_2,"ç•Œé¢\\å¼¹æ¡†\\p3.2.jpg");
+	loadimage(&p0,"ç•Œé¢\\å¼¹æ¡†\\p0.jpg");
 }
 
 
@@ -10592,15 +10592,15 @@ void Gainpicture()
 
 void Snakemove()
 {
-	for(int i=N-1;i>0;i--)//Éß¸÷Ïî¸³Öµ
+	for(int i=N-1;i>0;i--)//è›‡å„é¡¹èµ‹å€¼
 	{
         for(int j=0;j<3;j++)
 		{
 		    local_snake[i][j]=local_snake[i-1][j];
 		}
 	}
-    Snake_head();//ÉßÍ·ĞŞ¸Ä
-    Snake_second();//ÉßµÚ¶ş½ÚĞŞ¸Ä
+    Snake_head();//è›‡å¤´ä¿®æ”¹
+    Snake_second();//è›‡ç¬¬äºŒèŠ‚ä¿®æ”¹
 	Snake_tail();
 }
 
@@ -10611,7 +10611,7 @@ void  Explode(int x,int y)
 	IMAGE temp;
 	if(bgmusic_effect==1)
 	{
-		mciSendString("open music//µØÀ×1.mp3 alias mymusic5", NULL, 0, NULL);
+		mciSendString("open music//åœ°é›·1.mp3 alias mymusic5", NULL, 0, NULL);
         mciSendString("play mymusic5 from 0",NULL,0,NULL);
 	}
 	SetWorkingImage(&img);
@@ -10635,7 +10635,7 @@ void Add_food_1_1_1()
    {
        if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   foodexit=0;
@@ -10672,7 +10672,7 @@ void Add_food_1_1_2()
    {
        if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   foodexit=0;
@@ -10712,7 +10712,7 @@ void Add_food_1_1_3()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   Add_snake();
@@ -10751,7 +10751,7 @@ void Add_food_1_1_4()
        foodexit=0;
        if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   Add_snake();
@@ -10791,7 +10791,7 @@ void Add_food_1_1_5()
 	   Add_snake();
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   while(foodexit==0)
@@ -10829,7 +10829,7 @@ void Add_food_1_2_1()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -10875,7 +10875,7 @@ void Add_food_1_2_2()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -10921,7 +10921,7 @@ void Add_food_1_2_3()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -10967,7 +10967,7 @@ void Add_food_1_2_4()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11013,7 +11013,7 @@ void Add_food_1_2_5()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11057,7 +11057,7 @@ void Add_food_1_3_1()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11065,7 +11065,7 @@ void Add_food_1_3_1()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11108,7 +11108,7 @@ void Add_food_1_3_2()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11116,7 +11116,7 @@ void Add_food_1_3_2()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11159,7 +11159,7 @@ void Add_food_1_3_3()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11167,7 +11167,7 @@ void Add_food_1_3_3()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11210,7 +11210,7 @@ void Add_food_1_3_4()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11218,7 +11218,7 @@ void Add_food_1_3_4()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11261,7 +11261,7 @@ void Add_food_1_3_5()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11269,7 +11269,7 @@ void Add_food_1_3_5()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11312,7 +11312,7 @@ void Add_food_1_4_1()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11320,7 +11320,7 @@ void Add_food_1_4_1()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11364,7 +11364,7 @@ void Add_food_1_4_2()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11372,7 +11372,7 @@ void Add_food_1_4_2()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11416,7 +11416,7 @@ void Add_food_1_4_3()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11424,7 +11424,7 @@ void Add_food_1_4_3()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11468,7 +11468,7 @@ void Add_food_1_4_4()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11476,7 +11476,7 @@ void Add_food_1_4_4()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11520,7 +11520,7 @@ void Add_food_1_4_5()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11528,7 +11528,7 @@ void Add_food_1_4_5()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11572,7 +11572,7 @@ void Add_food_1_5_1()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11580,7 +11580,7 @@ void Add_food_1_5_1()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11624,7 +11624,7 @@ void Add_food_1_5_2()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11632,7 +11632,7 @@ void Add_food_1_5_2()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11676,7 +11676,7 @@ void Add_food_1_5_3()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11684,7 +11684,7 @@ void Add_food_1_5_3()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11728,7 +11728,7 @@ void Add_food_1_5_4()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11736,7 +11736,7 @@ void Add_food_1_5_4()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11780,7 +11780,7 @@ void Add_food_1_5_5()
    if(difftime(t9,t8)<=20)
    {
 	   	 char q[30];
-	     sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t9,t8));
+	     sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t9,t8));
 	     outtextxy(11.5*UNIT,3.5*UNIT,q);
    }
    if(local_snake[0][0]==food_x1&&local_snake[0][1]==food_y1)
@@ -11788,7 +11788,7 @@ void Add_food_1_5_5()
        foodexit=0;
 	   if(bgmusic_effect==1)
 	   {
-		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		   mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
            mciSendString("play mymusic4 from 0",NULL,0,NULL);
 	   }
 	   if(difftime(t9,t8)>20)
@@ -11836,7 +11836,7 @@ void Add_food_2_1_1()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		                 mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		                 mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                           mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -11874,7 +11874,7 @@ void Add_food_2_1_2()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -11912,7 +11912,7 @@ void Add_food_2_1_3()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -11950,7 +11950,7 @@ void Add_food_2_1_4()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -11988,7 +11988,7 @@ void Add_food_2_1_5()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12027,7 +12027,7 @@ void Add_food_2_2_1()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12071,7 +12071,7 @@ void Add_food_2_2_2()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12115,7 +12115,7 @@ void Add_food_2_2_3()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12159,7 +12159,7 @@ void Add_food_2_2_4()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12203,7 +12203,7 @@ void Add_food_2_2_5()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12245,7 +12245,7 @@ void Add_food_2_3_1()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12253,7 +12253,7 @@ void Add_food_2_3_1()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12295,7 +12295,7 @@ void Add_food_2_3_2()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12303,7 +12303,7 @@ void Add_food_2_3_2()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12345,7 +12345,7 @@ void Add_food_2_3_3()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12353,7 +12353,7 @@ void Add_food_2_3_3()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12395,7 +12395,7 @@ void Add_food_2_3_4()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12403,7 +12403,7 @@ void Add_food_2_3_4()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12445,7 +12445,7 @@ void Add_food_2_3_5()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12453,7 +12453,7 @@ void Add_food_2_3_5()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12495,7 +12495,7 @@ void Add_food_2_4_1()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12503,7 +12503,7 @@ void Add_food_2_4_1()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12545,7 +12545,7 @@ void Add_food_2_4_2()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12553,7 +12553,7 @@ void Add_food_2_4_2()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12596,7 +12596,7 @@ void Add_food_2_4_3()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12604,7 +12604,7 @@ void Add_food_2_4_3()
 				  foodexit=0;
 				 if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12648,7 +12648,7 @@ void Add_food_2_4_4()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12656,7 +12656,7 @@ void Add_food_2_4_4()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12700,7 +12700,7 @@ void Add_food_2_4_5()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12708,7 +12708,7 @@ void Add_food_2_4_5()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12753,7 +12753,7 @@ void Add_food_2_5_1()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12761,7 +12761,7 @@ void Add_food_2_5_1()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12803,7 +12803,7 @@ void Add_food_2_5_2()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12811,7 +12811,7 @@ void Add_food_2_5_2()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12852,7 +12852,7 @@ void Add_food_2_5_3()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12860,7 +12860,7 @@ void Add_food_2_5_3()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12902,7 +12902,7 @@ void Add_food_2_5_4()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12910,7 +12910,7 @@ void Add_food_2_5_4()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -12952,7 +12952,7 @@ void Add_food_2_5_5()
 			 if(difftime(t10,t8)<=20)
 			{
 	   	               char q[30];
-	                   sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t10,t8));
+	                   sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t10,t8));
 	                   outtextxy(11.5*UNIT,3.5*UNIT,q);
 			}
 			 if(local_snake[0][0]==food_x2&&local_snake[0][1]==food_y2)
@@ -12960,7 +12960,7 @@ void Add_food_2_5_5()
 				  foodexit=0;
 				  if(bgmusic_effect==1)
 				  {
-		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		              mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                       mciSendString("play mymusic4 from 0",NULL,0,NULL);
 				  }
 				   while(foodexit==0)
@@ -13002,7 +13002,7 @@ void Add_food_3_1_1()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  Add_snake();
@@ -13038,7 +13038,7 @@ void Add_food_3_1_2()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  Add_snake();
@@ -13073,7 +13073,7 @@ void Add_food_3_1_3()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  Add_snake();
@@ -13108,7 +13108,7 @@ void Add_food_3_1_4()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  Add_snake();
@@ -13143,7 +13143,7 @@ void Add_food_3_1_5()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  Add_snake();
@@ -13179,7 +13179,7 @@ void Add_food_3_2_1()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13220,7 +13220,7 @@ void Add_food_3_2_2()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13261,7 +13261,7 @@ void Add_food_3_2_3()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13302,7 +13302,7 @@ void Add_food_3_2_4()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13343,7 +13343,7 @@ void Add_food_3_2_5()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13382,7 +13382,7 @@ void Add_food_3_3_1()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13390,7 +13390,7 @@ void Add_food_3_3_1()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13429,7 +13429,7 @@ void Add_food_3_3_2()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13437,7 +13437,7 @@ void Add_food_3_3_2()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13476,7 +13476,7 @@ void Add_food_3_3_3()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13484,7 +13484,7 @@ void Add_food_3_3_3()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13523,7 +13523,7 @@ void Add_food_3_3_4()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13531,7 +13531,7 @@ void Add_food_3_3_4()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13570,7 +13570,7 @@ void Add_food_3_3_5()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13578,7 +13578,7 @@ void Add_food_3_3_5()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13617,7 +13617,7 @@ void Add_food_3_4_1()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13625,7 +13625,7 @@ void Add_food_3_4_1()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
               if(difftime(t11,t8)>20)
@@ -13662,7 +13662,7 @@ void Add_food_3_4_2()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13670,7 +13670,7 @@ void Add_food_3_4_2()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
               if(difftime(t11,t8)>20)
@@ -13707,7 +13707,7 @@ void Add_food_3_4_3()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13715,7 +13715,7 @@ void Add_food_3_4_3()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
               if(difftime(t11,t8)>20)
@@ -13752,7 +13752,7 @@ void Add_food_3_4_4()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13760,7 +13760,7 @@ void Add_food_3_4_4()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
               if(difftime(t11,t8)>20)
@@ -13797,7 +13797,7 @@ void Add_food_3_4_5()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13805,7 +13805,7 @@ void Add_food_3_4_5()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
               if(difftime(t11,t8)>20)
@@ -13842,7 +13842,7 @@ void Add_food_3_5_1()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13850,7 +13850,7 @@ void Add_food_3_5_1()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13889,7 +13889,7 @@ void Add_food_3_5_2()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13897,7 +13897,7 @@ void Add_food_3_5_2()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13936,7 +13936,7 @@ void Add_food_3_5_3()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13944,7 +13944,7 @@ void Add_food_3_5_3()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -13983,7 +13983,7 @@ void Add_food_3_5_4()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -13991,7 +13991,7 @@ void Add_food_3_5_4()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -14030,7 +14030,7 @@ void Add_food_3_5_5()
 		 if(difftime(t11,t8)<=20)
 		 {
 	   	       char q[30];
-	           sprintf(q,"ÄÜÁ¿Ê±¿ÌÊ£Óà%.1fs",20-difftime(t11,t8));
+	           sprintf(q,"èƒ½é‡æ—¶åˆ»å‰©ä½™%.1fs",20-difftime(t11,t8));
 	           outtextxy(11.5*UNIT,3.5*UNIT,q);
 		 }
          if(local_snake[0][0]==food_x3&&local_snake[0][1]==food_y3)
@@ -14038,7 +14038,7 @@ void Add_food_3_5_5()
               foodexit=0;
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
         	  if(difftime(t11,t8)>20)
@@ -14104,7 +14104,7 @@ int food_decide1_1(int x,int y,int kind)
 {
  
 	int foodexit=1;
-	//ÉßÉí	
+	//è›‡èº«	
 	for(int i=0;i<N;i++)
 	{
 	 	if(x==local_snake[i][0]&&y==local_snake[i][1])
@@ -14113,7 +14113,7 @@ int food_decide1_1(int x,int y,int kind)
 		     break;
 		 }
 	}
-	   //ÕÏ°­
+	   //éšœç¢
 	if((y>=14&&y<=15)&&((x<=20&&x>=9)||(x<=5&&x>=1)||(x<=28&&x>=24)))
              foodexit=0;
     if(((y<=15)&&(y>=14))&&((x<=8&&x>=6)||(x<=23&&x>=21)))
@@ -15780,11 +15780,11 @@ int  Snake_judge1_1()
 {
 	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
-    //µØÍ¼ÕÏ°­
+    //åœ°å›¾éšœç¢
 	if(local_snake[0][1]>=14&&local_snake[0][1]<=15&&((local_snake[0][0]<=20&&local_snake[0][0]>=9)||(local_snake[0][0]<=5&&local_snake[0][0]>=1)||(local_snake[0][0]<=28&&local_snake[0][0]>=24)))
              gameover=1;
     
@@ -15796,7 +15796,7 @@ int  Snake_judge1_1()
 		 if(direction!=1)
 			 gameover=1;
 
-	for(int i=1;i<N;i++)  //ÉßÉí
+	for(int i=1;i<N;i++)  //è›‡èº«
 	{
          if(local_snake[0][0]==local_snake[i][0]&&local_snake[0][1]==local_snake[i][1])
 		 {
@@ -15811,7 +15811,7 @@ int  Snake_judge1_2()
 {
 	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -15855,7 +15855,7 @@ int  Snake_judge1_3()
 {
 	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -15900,7 +15900,7 @@ int  Snake_judge1_3()
 int  Snake_judge1_4()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -15948,7 +15948,7 @@ int  Snake_judge1_4()
 int  Snake_judge1_5()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16007,7 +16007,7 @@ int  Snake_judge1_5()
 int  Snake_judge2_1()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16059,7 +16059,7 @@ int  Snake_judge2_1()
 int  Snake_judge2_2()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16113,7 +16113,7 @@ int  Snake_judge2_2()
 int  Snake_judge2_3()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16154,7 +16154,7 @@ int  Snake_judge2_3()
 int  Snake_judge2_4()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16214,7 +16214,7 @@ int  Snake_judge2_4()
 int  Snake_judge2_5()
 {	
 	int gameover=0;
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16712,7 +16712,7 @@ int Snake_judge5_1()
 {
 	int gameover = 0;
 	
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16741,7 +16741,7 @@ int Snake_judge5_2()
 {
 	int gameover = 0;
 	
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16793,7 +16793,7 @@ int Snake_judge5_3()
 {
 	int gameover = 0;
 	
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16846,7 +16846,7 @@ int Snake_judge5_4()
 {
 	int gameover = 0;
 	
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -16935,7 +16935,7 @@ int Snake_judge5_5()
 {
 	int gameover = 0;
 	
-	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//Ç½±Ú
+	if((local_snake[0][0]<=0)||(local_snake[0][0]>=29)||(local_snake[0][1]<=0)||(local_snake[0][1]>=29))//å¢™å£
 	{
              gameover=1;
 	}
@@ -17049,7 +17049,7 @@ int customs_pass_1_1()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17117,7 +17117,7 @@ int customs_pass_1_2()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17185,7 +17185,7 @@ int customs_pass_1_3()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17254,7 +17254,7 @@ int customs_pass_1_4()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17324,7 +17324,7 @@ int customs_pass_1_5()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17394,7 +17394,7 @@ int customs_pass_2_1()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17465,7 +17465,7 @@ int customs_pass_2_2()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17536,7 +17536,7 @@ int customs_pass_2_3()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17607,7 +17607,7 @@ int customs_pass_2_4()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17678,7 +17678,7 @@ int customs_pass_2_5()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17747,11 +17747,11 @@ int customs_pass_3_1()
 			}
 		 }
 		 char f[50];
-		 sprintf(f,"%d",bool_p);//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+		 sprintf(f,"%d",bool_p);//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(18.5*UNIT, 26.5*UNIT, f); 
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17821,7 +17821,7 @@ int customs_pass_3_2()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17891,7 +17891,7 @@ int customs_pass_3_3()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -17961,7 +17961,7 @@ int customs_pass_3_4()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18031,7 +18031,7 @@ int customs_pass_3_5()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18101,7 +18101,7 @@ int customs_pass_4_1()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18171,7 +18171,7 @@ int customs_pass_4_2()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18241,7 +18241,7 @@ int customs_pass_4_3()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18311,7 +18311,7 @@ int customs_pass_4_4()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18381,7 +18381,7 @@ int customs_pass_4_5()
 		 }
 	      if(difftime(t1,t0)<=20)
 		  {
-                sprintf(s,"¾à¶´ÖØĞÂ¿ªÆôÊ±¼ä»¹Ê£%.1fs",20-difftime(t1,t0));//¾àÀë¶´³öÏÖÊ£ÓàÊ±¼ä
+                sprintf(s,"è·æ´é‡æ–°å¼€å¯æ—¶é—´è¿˜å‰©%.1fs",20-difftime(t1,t0));//è·ç¦»æ´å‡ºç°å‰©ä½™æ—¶é—´
 			    outtextxy(32.5*UNIT, 26.5*UNIT, s); 
 		  }
           if(difftime(t1,t0)>=20&&bool_q==0)
@@ -18430,7 +18430,7 @@ int customs_pass_5_1()
 	 int foodexit=0;
 	 int gameover_pd=0;
 	 int temp1=0,temp2=0,temp3=0;
-	 if(bool9==0)//Êä³öÃÅ
+	 if(bool9==0)//è¾“å‡ºé—¨
 	 {
 			   putimage(0,27*UNIT,&img9,SRCAND); 
 			   putimage(0,27*UNIT,&img9_1,SRCINVERT);			   
@@ -18492,24 +18492,24 @@ int customs_pass_5_1()
 		 }
 		 if(bool10==2&&bool11==1)
 			 bool11=0;
-		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//ÅĞ¶ÏÊÇ·ñ³ÔÉÏÕæÔ¿³×
+		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//åˆ¤æ–­æ˜¯å¦åƒä¸ŠçœŸé’¥åŒ™
 		 {
-			 bool9=1;//±ê¼ÇÎª¿ªÆô
+			 bool9=1;//æ ‡è®°ä¸ºå¼€å¯
 			 bool14=1;
 		 }
-		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool12=1;
 		 }
-		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool13=1;
 		 }
-         if(((local_snake[0][0]==0&&local_snake[0][1]==27)||(local_snake[0][0]==0&&local_snake[0][1]==28))&&bool9!=1)//Î´¿ªÆôÊ±ÈôÅöÔòËÀÍö
+         if(((local_snake[0][0]==0&&local_snake[0][1]==27)||(local_snake[0][0]==0&&local_snake[0][1]==28))&&bool9!=1)//æœªå¼€å¯æ—¶è‹¥ç¢°åˆ™æ­»äº¡
 			 gameover_pd=4;
 		 if(((local_snake[0][0]==0&&local_snake[0][1]==27)||(local_snake[0][0]==0&&local_snake[0][1]==28))&&bool9==1)
                   gameover_pd=1;
@@ -18548,7 +18548,7 @@ int customs_pass_5_2()
 	 int foodexit=0;
 	 int gameover_pd=0;
 	 int temp1=0,temp2=0,temp3=0;
-	 if(bool9==0)//Êä³öÃÅ
+	 if(bool9==0)//è¾“å‡ºé—¨
 	{
 			   putimage(0,14*UNIT,&img9,SRCAND); 
 			   putimage(0,14*UNIT,&img9_1,SRCINVERT);			   
@@ -18610,25 +18610,25 @@ int customs_pass_5_2()
 		}
 		if(bool10==2&&bool11==1)
 			 bool11=0;
-		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//ÅĞ¶ÏÊÇ·ñ³ÔÉÏÕæÔ¿³×
+		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//åˆ¤æ–­æ˜¯å¦åƒä¸ŠçœŸé’¥åŒ™
 		 {
-			 bool9=1;//±ê¼ÇÎª¿ªÆô
+			 bool9=1;//æ ‡è®°ä¸ºå¼€å¯
 			 bool14=1;
 		 }
-		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool12=1;
 		 }
-		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool13=1;
 		 }
 
-        if(((local_snake[0][0]==0&&local_snake[0][1]==14)||(local_snake[0][0]==0&&local_snake[0][1]==15))&&bool9!=1)//Î´¿ªÆôÊ±ÈôÅöÔòËÀÍö
+        if(((local_snake[0][0]==0&&local_snake[0][1]==14)||(local_snake[0][0]==0&&local_snake[0][1]==15))&&bool9!=1)//æœªå¼€å¯æ—¶è‹¥ç¢°åˆ™æ­»äº¡
 			 gameover_pd=4;
 		 if(((local_snake[0][0]==0&&local_snake[0][1]==14)||(local_snake[0][0]==0&&local_snake[0][1]==15))&&bool9==1)
                   gameover_pd=1;
@@ -18668,7 +18668,7 @@ int customs_pass_5_3()
 	 int foodexit=0;
 	 int gameover_pd=0;
 	 int temp1=0,temp2=0,temp3=0;
-	 if(bool9==0)//Êä³öÃÅ
+	 if(bool9==0)//è¾“å‡ºé—¨
 	{
 			   putimage(13*UNIT,0*UNIT,&img9,SRCAND); 
 			   putimage(13*UNIT,0*UNIT,&img9_1,SRCINVERT);			   
@@ -18730,24 +18730,24 @@ int customs_pass_5_3()
 		}
 		if(bool10==2&&bool11==1)
 			 bool11=0;
-		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//ÅĞ¶ÏÊÇ·ñ³ÔÉÏÕæÔ¿³×
+		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//åˆ¤æ–­æ˜¯å¦åƒä¸ŠçœŸé’¥åŒ™
 		 {
-			 bool9=1;//±ê¼ÇÎª¿ªÆô
+			 bool9=1;//æ ‡è®°ä¸ºå¼€å¯
 			 bool14=1;
 		 }
-		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool12=1;
 		 }
-		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool13=1;
 		 }
-        if(((local_snake[0][0]==13&&local_snake[0][1]==0)||(local_snake[0][0]==14&&local_snake[0][1]==0))&&bool9!=1)//Î´¿ªÆôÊ±ÈôÅöÔòËÀÍö
+        if(((local_snake[0][0]==13&&local_snake[0][1]==0)||(local_snake[0][0]==14&&local_snake[0][1]==0))&&bool9!=1)//æœªå¼€å¯æ—¶è‹¥ç¢°åˆ™æ­»äº¡
 			 gameover_pd=4;
 		if(((local_snake[0][0]==13&&local_snake[0][1]==0)||(local_snake[0][0]==14&&local_snake[0][1]==0))&&bool9==1)
                   gameover_pd=1;
@@ -18786,7 +18786,7 @@ int customs_pass_5_4()
 	 int foodexit=0;
 	 int gameover_pd=0;
 	 int temp1=0,temp2=0,temp3=0;
-	 if(bool9==0)//Êä³öÃÅ
+	 if(bool9==0)//è¾“å‡ºé—¨
 	{
 			   putimage(0,14*UNIT,&img9,SRCAND); 
 			   putimage(0,14*UNIT,&img9_1,SRCINVERT);			   
@@ -18848,25 +18848,25 @@ int customs_pass_5_4()
 		}
 		if(bool10==2&&bool11==1)
 			 bool11=0;
-		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//ÅĞ¶ÏÊÇ·ñ³ÔÉÏÕæÔ¿³×
+		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//åˆ¤æ–­æ˜¯å¦åƒä¸ŠçœŸé’¥åŒ™
 		 {
-			 bool9=1;//±ê¼ÇÎª¿ªÆô
+			 bool9=1;//æ ‡è®°ä¸ºå¼€å¯
 			 bool14=1;
 		 }
-		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool12=1;
 		 }
-		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool13=1;
 		 }
 
-        if(((local_snake[0][0]==0&&local_snake[0][1]==24)||(local_snake[0][0]==0&&local_snake[0][1]==25))&&bool9!=1)//Î´¿ªÆôÊ±ÈôÅöÔòËÀÍö
+        if(((local_snake[0][0]==0&&local_snake[0][1]==24)||(local_snake[0][0]==0&&local_snake[0][1]==25))&&bool9!=1)//æœªå¼€å¯æ—¶è‹¥ç¢°åˆ™æ­»äº¡
 			 gameover_pd=4;
 		 if(((local_snake[0][0]==0&&local_snake[0][1]==24)||(local_snake[0][0]==0&&local_snake[0][1]==25))&&bool9==1)
                   gameover_pd=1;
@@ -18905,7 +18905,7 @@ int customs_pass_5_5()
 	 int foodexit=0;
 	 int gameover_pd=0;
 	 int temp1=0,temp2=0,temp3=0;
-	 if(bool9==0)//Êä³öÃÅ
+	 if(bool9==0)//è¾“å‡ºé—¨
 	{
 			   putimage(0,1*UNIT,&img9,SRCAND); 
 			   putimage(0,1*UNIT,&img9_1,SRCINVERT);			   
@@ -18967,25 +18967,25 @@ int customs_pass_5_5()
 		}
 		if(bool10==2&&bool11==1)
 			 bool11=0;
-		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//ÅĞ¶ÏÊÇ·ñ³ÔÉÏÕæÔ¿³×
+		 if(local_snake[0][0]==key[2][0]&&local_snake[0][1]==key[2][1])//åˆ¤æ–­æ˜¯å¦åƒä¸ŠçœŸé’¥åŒ™
 		 {
-			 bool9=1;//±ê¼ÇÎª¿ªÆô
+			 bool9=1;//æ ‡è®°ä¸ºå¼€å¯
 			 bool14=1;
 		 }
-		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[0][0]&&local_snake[0][1]==key[0][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool12=1;
 		 }
-		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//ÈôÎ´³Ôµ½ÔòÔö¼ÓÉß³¤
+		 if((local_snake[0][0]==key[1][0]&&local_snake[0][1]==key[1][1]))//è‹¥æœªåƒåˆ°åˆ™å¢åŠ è›‡é•¿
 		 {
 			 Add_snake();
 			 Add_snake();
 			 bool13=1;
 		 }
 
-        if(((local_snake[0][0]==0&&local_snake[0][1]==1)||(local_snake[0][0]==0&&local_snake[0][1]==2))&&bool9!=1)//Î´¿ªÆôÊ±ÈôÅöÔòËÀÍö
+        if(((local_snake[0][0]==0&&local_snake[0][1]==1)||(local_snake[0][0]==0&&local_snake[0][1]==2))&&bool9!=1)//æœªå¼€å¯æ—¶è‹¥ç¢°åˆ™æ­»äº¡
 			 gameover_pd=4;
 		 if(((local_snake[0][0]==0&&local_snake[0][1]==1)||(local_snake[0][0]==0&&local_snake[0][1]==2))&&bool9==1)
                   gameover_pd=1;
@@ -19024,7 +19024,7 @@ return gameover_pd;
 
 
 
-void Cut_down_snake()//ÉßÉí¼õ¶Ì
+void Cut_down_snake()//è›‡èº«å‡çŸ­
 {
 		N--;
 		Snake_tail();
@@ -19044,10 +19044,10 @@ void Cut_down_snake()//ÉßÉí¼õ¶Ì
 }
 
 
-void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
+void product_props2_1()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,1.5*UNIT,q);
 	 int foodexit=1;
 	 if(count_1==6&&boolw==0)
@@ -19061,11 +19061,11 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,22.5*UNIT,r);
 		 }
 	 }
-     if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+     if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	 {
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19087,7 +19087,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	 }
 	 srand((int)time(0));
-     time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+     time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	 if(bool2==1)
 	 {
         if(difftime(t5,t4)>=20)
@@ -19097,7 +19097,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}		
 	 }
@@ -19110,7 +19110,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}
 	 }
@@ -19118,7 +19118,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 	 {
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	 }
@@ -19126,7 +19126,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 	 {
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	 }
@@ -19135,7 +19135,7 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19148,10 +19148,10 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19161,10 +19161,10 @@ void product_props2_1()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
+void product_props2_2()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19178,11 +19178,11 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,22.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19204,7 +19204,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19214,7 +19214,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19227,7 +19227,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}
 	}
@@ -19235,7 +19235,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19243,7 +19243,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19252,7 +19252,7 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19265,10 +19265,10 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19278,10 +19278,10 @@ void product_props2_2()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
+void product_props2_3()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19295,11 +19295,11 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,22.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19321,7 +19321,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19331,7 +19331,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19344,7 +19344,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}
 	}
@@ -19352,7 +19352,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19360,7 +19360,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19369,7 +19369,7 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19382,10 +19382,10 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%3+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19395,10 +19395,10 @@ void product_props2_3()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
+void product_props2_4()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19412,11 +19412,11 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,22.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19438,7 +19438,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19448,7 +19448,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19461,7 +19461,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}
 	}
@@ -19469,7 +19469,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19477,7 +19477,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19486,7 +19486,7 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19499,10 +19499,10 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%3+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19512,10 +19512,10 @@ void product_props2_4()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
+void product_props2_5()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19529,11 +19529,11 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,22.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19555,7 +19555,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19565,7 +19565,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19578,7 +19578,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,22.5*UNIT,q);
 		}
 	}
@@ -19586,7 +19586,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19594,7 +19594,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -19603,7 +19603,7 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19616,10 +19616,10 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19629,10 +19629,10 @@ void product_props2_5()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
+void product_props4_1()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19646,11 +19646,11 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19672,7 +19672,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19682,7 +19682,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19695,7 +19695,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -19703,7 +19703,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19711,7 +19711,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19720,7 +19720,7 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0; 
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19733,10 +19733,10 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19746,10 +19746,10 @@ void product_props4_1()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
+void product_props4_2()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19763,11 +19763,11 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19789,7 +19789,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19799,7 +19799,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19812,7 +19812,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -19820,7 +19820,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19828,7 +19828,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19837,7 +19837,7 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19850,10 +19850,10 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19863,10 +19863,10 @@ void product_props4_2()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
+void product_props4_3()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19880,11 +19880,11 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -19906,7 +19906,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -19916,7 +19916,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19929,7 +19929,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -19937,7 +19937,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19945,7 +19945,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -19954,7 +19954,7 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0; 
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -19967,10 +19967,10 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -19980,10 +19980,10 @@ void product_props4_3()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
+void product_props4_4()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -19997,11 +19997,11 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20023,7 +20023,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20033,7 +20033,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20046,7 +20046,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20054,7 +20054,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20062,7 +20062,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20071,7 +20071,7 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20084,10 +20084,10 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20097,10 +20097,10 @@ void product_props4_4()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
+void product_props4_5()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20114,11 +20114,11 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20140,7 +20140,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20150,7 +20150,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20163,7 +20163,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20171,7 +20171,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20179,7 +20179,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20188,7 +20188,7 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0; 
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20201,10 +20201,10 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20214,10 +20214,10 @@ void product_props4_5()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
+void product_props5_1()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20231,11 +20231,11 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20257,7 +20257,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20267,7 +20267,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20280,7 +20280,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20288,7 +20288,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20296,7 +20296,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20305,7 +20305,7 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20318,10 +20318,10 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20330,10 +20330,10 @@ void product_props5_1()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
+void product_props5_2()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20347,11 +20347,11 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20373,7 +20373,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20383,7 +20383,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20396,7 +20396,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20404,7 +20404,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20412,7 +20412,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20421,7 +20421,7 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20434,10 +20434,10 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20447,10 +20447,10 @@ void product_props5_2()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
+void product_props5_3()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20464,11 +20464,11 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20490,7 +20490,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20500,7 +20500,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20513,7 +20513,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20521,7 +20521,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20529,7 +20529,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20538,7 +20538,7 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			  if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20551,10 +20551,10 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20564,10 +20564,10 @@ void product_props5_3()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
+void product_props5_4()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20581,11 +20581,11 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20607,7 +20607,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20617,7 +20617,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20630,7 +20630,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20638,7 +20638,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20646,7 +20646,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,22.5*UNIT,q);
 		}		
 	}
@@ -20655,7 +20655,7 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;  
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20668,10 +20668,10 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20681,10 +20681,10 @@ void product_props5_4()//µÀ¾ßËæ»úÌí¼Ó
 }
 
 
-void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
+void product_props5_5()//é“å…·éšæœºæ·»åŠ 
 {
      char q[30];
-	 sprintf(q,"¾àÀëµÀ¾ßÖØÏÖÊ£Óà%d¸öË®¹û",6-count_1);
+	 sprintf(q,"è·ç¦»é“å…·é‡ç°å‰©ä½™%dä¸ªæ°´æœ",6-count_1);
 	 outtextxy(10.5*UNIT,2.5*UNIT,q);
 	    int foodexit=1;
 	if(count_1==6&&boolw==0)
@@ -20698,11 +20698,11 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
          char r[30];
 	     if(count_1==6&&boolw==1)
 		 {
-	        sprintf(r,"µÀ¾ßÏûÊ§Ê£Óà%.1fs",20-difftime(t3,t2));
+	        sprintf(r,"é“å…·æ¶ˆå¤±å‰©ä½™%.1fs",20-difftime(t3,t2));
 	        outtextxy(34*UNIT,26.5*UNIT,r);
 		 }
 	}
-    if(difftime(t3,t2)>=20)//¿ØÖÆÎª20sºóµÀ¾ßÏûÊ§
+    if(difftime(t3,t2)>=20)//æ§åˆ¶ä¸º20såé“å…·æ¶ˆå¤±
 	{
 		boolw=0;
 		if(difftime(t3,t2)==20)
@@ -20724,7 +20724,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
 		    putimage(props_x*UNIT,props_y*UNIT,&props[1][1],SRCINVERT);
 	}
 	srand((int)time(0));
-    time_t t5=time(NULL);//ËÙ¶ÈÊ±¼äÅĞ¶Ï
+    time_t t5=time(NULL);//é€Ÿåº¦æ—¶é—´åˆ¤æ–­
 	if(bool2==1)
 	{
         if(difftime(t5,t4)>=20)
@@ -20734,7 +20734,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t4)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼ÓËÙÊ£Óà%.1fs",20-difftime(t5,t4));
+	             sprintf(q,"å½“å‰åŠ é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t4));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20747,7 +20747,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
         if(difftime(t5,t6)<=20)
 		{
 	    	     char q[30];
-	             sprintf(q,"µ±Ç°¼õËÙÊ£Óà%.1fs",20-difftime(t5,t6));
+	             sprintf(q,"å½“å‰å‡é€Ÿå‰©ä½™%.1fs",20-difftime(t5,t6));
 	             outtextxy(33.5*UNIT,26.5*UNIT,q);
 		}
 	}
@@ -20755,7 +20755,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t12)<=5)
 		{
-	    	     char *q="ÉßÉí¼õ¶Ì3½Ú";
+	    	     char *q="è›‡èº«å‡çŸ­3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20763,7 +20763,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
 	{
         if(difftime(t5,t13)<=5)
 		{
-	    	     char *q="ÉßÉíÔö³¤3½Ú";
+	    	     char *q="è›‡èº«å¢é•¿3èŠ‚";
 	             outtextxy(35*UNIT,26.5*UNIT,q);
 		}		
 	}
@@ -20772,7 +20772,7 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
 	           foodexit=0;
 			   if(bgmusic_effect==1)
 			  {
-		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //´ò¿ªÒôÀÖÎÄ¼ş //²¥·ÅÒôÀÖÎÄ¼ş
+		            mciSendString("open music//food.mp3 alias mymusic4", NULL, 0, NULL); //æ‰“å¼€éŸ³ä¹æ–‡ä»¶ //æ’­æ”¾éŸ³ä¹æ–‡ä»¶
                     mciSendString("play mymusic4 from 0",NULL,0,NULL);
 			  }
 			   count_1=0;
@@ -20785,10 +20785,10 @@ void product_props5_5()//µÀ¾ßËæ»úÌí¼Ó
 			   }
 		      int m;
 			  m=rand()%5+1;
-			  switch(m)//Ó¦¸ÄÎªm
+			  switch(m)//åº”æ”¹ä¸ºm
 			  {
-			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//¼õ
-			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//Ôö³¤
+			  case 1:t12=time(NULL);Cut_down_snake();bool2=3;break;//å‡
+			  case 2:t13=time(NULL);Add_snake();Add_snake();Add_snake();bool2=4;break;//å¢é•¿
 			  case 3:Speed_add();break;//
 			  case 4:Speed_down();break;
 			  case 5:not_add_snake();break;
@@ -20826,17 +20826,17 @@ void Energy3_1()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(36*UNIT, 22.5*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -20872,16 +20872,16 @@ void Energy3_2()
 	   time_t t4=time(NULL);
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(36*UNIT, 22.5*UNIT, s); 
 	}
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -20917,17 +20917,17 @@ void Energy3_3()
 	   time_t t4=time(NULL);
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_2*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_2*10);
 			    outtextxy(36*UNIT, 22.5*UNIT, s); 
 	}
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -20963,16 +20963,16 @@ void Energy3_4()
 	   time_t t4=time(NULL);
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(36*UNIT, 22.5*UNIT, s); 
 	}
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21008,16 +21008,16 @@ void Energy3_5()
 	   time_t t4=time(NULL);
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(36*UNIT, 22.5*UNIT, s); 
 	}
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21053,16 +21053,16 @@ void Energy4_1()
 	   time_t t4=time(NULL);
 	   	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21097,17 +21097,17 @@ void Energy4_2()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT,1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21142,17 +21142,17 @@ void Energy4_3()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21187,17 +21187,17 @@ void Energy4_4()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21232,17 +21232,17 @@ void Energy4_5()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT,1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21277,17 +21277,17 @@ void Energy5_1()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21322,17 +21322,17 @@ void Energy5_2()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21367,17 +21367,17 @@ void Energy5_3()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT,1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21412,17 +21412,17 @@ void Energy5_4()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT, 1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21457,17 +21457,17 @@ void Energy5_5()
 	   count1_3=10;
 	{
         char s[30];       
-		sprintf(s,"ÄÜÁ¿%d%%",count1_3*10);
+		sprintf(s,"èƒ½é‡%d%%",count1_3*10);
 			    outtextxy(14*UNIT,1*UNIT, s); 
 	}
 	   time_t t4=time(NULL);
     if(count1_3==10)
 	{
-		bool4=1;//±ê¼ÇÄÜÁ¿ÒÑ¾­¼¯Âú
+		bool4=1;//æ ‡è®°èƒ½é‡å·²ç»é›†æ»¡
 	}
 	if(bool3==0&&bool4==1)
 	{
-        char *q="ÄÜÁ¿ÒÑ¼¯Âú£¬Çë°´rÊÍ·Å";
+        char *q="èƒ½é‡å·²é›†æ»¡ï¼Œè¯·æŒ‰ré‡Šæ”¾";
 	    outtextxy(10.5*UNIT,3.5*UNIT,q);
 	}
 
@@ -21526,7 +21526,7 @@ int random_landmine4_1()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21566,7 +21566,7 @@ int random_landmine4_2()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21606,7 +21606,7 @@ int random_landmine4_3()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21646,7 +21646,7 @@ int random_landmine4_4()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21686,7 +21686,7 @@ int random_landmine4_5()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21726,7 +21726,7 @@ int random_landmine5_1()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21766,7 +21766,7 @@ int random_landmine5_2()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21806,7 +21806,7 @@ int random_landmine5_3()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21846,7 +21846,7 @@ int random_landmine5_4()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21886,7 +21886,7 @@ int random_landmine5_5()
 	    bool7=0;
 	}
      char s[30];
-     sprintf(s,"ÕÏ°­±ä»¯Ê£Óà%.1fs",10-difftime(t16,t15));//ÕÏ°­±ä»¯Ê£ÓàÊ±¼ä
+     sprintf(s,"éšœç¢å˜åŒ–å‰©ä½™%.1fs",10-difftime(t16,t15));//éšœç¢å˜åŒ–å‰©ä½™æ—¶é—´
 	 outtextxy(10.5*UNIT, 28*UNIT, s); 
 	//
 	if(local_snake[0][0]==landmine_x&&local_snake[0][1]==landmine_y)
@@ -21919,7 +21919,7 @@ void back_pass1()
 		r1.h = 504;	
 		if(IsInRect(mouseX, mouseY, r1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -21966,7 +21966,7 @@ void back_pass2()
 		r1.h = 504;	
 		if(IsInRect(mouseX, mouseY, r1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22013,7 +22013,7 @@ void back_pass3()
 		r1.h = 504;	
 		if(IsInRect(mouseX, mouseY, r1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22061,7 +22061,7 @@ void back_pass4()
 		r1.h = 504;	
 		if(IsInRect(mouseX, mouseY, r1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22108,7 +22108,7 @@ void back_pass5()
 		r1.h = 504;	
 		if(IsInRect(mouseX, mouseY, r1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22138,7 +22138,7 @@ void back_pass5()
 void hello ()
 {
     IMAGE img;
-	loadimage(&img,"½çÃæ\\muen.jpg");
+	loadimage(&img,"ç•Œé¢\\muen.jpg");
 	putimage(0,0,&img);
 	while (true)
 	{
@@ -22159,12 +22159,12 @@ void hello ()
 		star.h = 363;	
 		if(IsInRect(mouseX, mouseY, star)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
 				IMAGE img0;
-	            loadimage(&img0,"½çÃæ\\001.jpg");
+	            loadimage(&img0,"ç•Œé¢\\001.jpg");
 	            putimage(0,0,&img0);
                 menu();
 			}
@@ -22208,7 +22208,7 @@ void hello ()
 void Game_instruction()
 {
     IMAGE img;
-	loadimage(&img,"½çÃæ\\js.jpg");
+	loadimage(&img,"ç•Œé¢\\js.jpg");
 	putimage(0,0,&img);
 	while (true)
 	{
@@ -22229,7 +22229,7 @@ void Game_instruction()
 		goback.h = 553;	
 		if(IsInRect(mouseX, mouseY, goback)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22261,7 +22261,7 @@ void set_choose()
 		ropen1.h = 270;	
 		if(IsInRect(mouseX, mouseY, ropen1)) 
 		{
-			//·µ»Ø°´¼üÏìÓ¦
+			//è¿”å›æŒ‰é”®å“åº”
 			if(isMouseDown)
 			{
 				isMouseDown=false;
@@ -22336,7 +22336,7 @@ void set_choose()
 								fwrite(&bgmusic_effect,sizeof(int),1,fset);
 								fclose(fset);
 								IMAGE img;
-								loadimage(&img,"½çÃæ\\001.jpg");
+								loadimage(&img,"ç•Œé¢\\001.jpg");
 	                            putimage(0,0,&img);
 								menu();
 							}
@@ -22356,7 +22356,7 @@ void set_choose()
 									temp_music[0]=bgmusic;
 									temp_music[1]=bgmusic_effect;
 									IMAGE img;
-								    loadimage(&img,"½çÃæ\\001.jpg");
+								    loadimage(&img,"ç•Œé¢\\001.jpg");
 	                                putimage(0,0,&img);
 								    menu();
 								}
